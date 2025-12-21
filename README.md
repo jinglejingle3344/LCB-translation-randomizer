@@ -17,3 +17,13 @@ Simple python script with a GUI to randomize Limbus Company's localization
 - the buttons really should explain all you need to know  
     - the lang folder the program speaks of is located at `~/.local/share/Steam/steamapps/common/Limbus Company/LimbusCompany_Data/Lang` on linux (presumably depends on where you installed limbus)
 - on windows you can simply select the target folders, i think  
+
+# how it works (dont read if uninterested, its just file manipulation)
+
+it simply memorizes the first folder as the input localization folder and the second as the output lang folder  
+the next step is copying the original folder's contents to a new folder with a randomized name located in lang while also putting in the font folder (it does not overwrite any existing fonts, incase this is applied to a custom localization; a font is required for limbus to be able to load a custom language)  
+then, it scans every json file in the input folder to find each string that corresponds to valid text fields (which are listed in a tuple) and puts them into a list  
+having done that, it then goes through the new copy of the folder located at lang, updates every field with a completely random string from the list obtained from the previous step (while removing used up strings from the list, so that there arent any repeats), strips the files of any localization prefixes (EN_, KR_, JP_; stripping these is required for limbus to be capable of reading the new localization) and saves them. this is the most time consuming step  
+afterwards, it simply updates the config.json file to tell limbus to use the new localization file and thats that  
+<br>
+the reason i let people complete each step individually is so that they can try to mix and match things for potentially an even more humorous experience
