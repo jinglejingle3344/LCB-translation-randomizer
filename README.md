@@ -1,5 +1,7 @@
 # LCB-translation-randomizer
 Simple python script with a GUI to randomize Limbus Company's localization
+<img width="927" height="440" alt="image" src="https://github.com/user-attachments/assets/0cd7ffdb-d7ff-4086-b786-4971369c18b3" />
+
 
 # Installation (if you dont use github Ever)
 
