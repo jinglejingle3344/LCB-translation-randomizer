@@ -27,3 +27,5 @@ having done that, it then goes through the new copy of the folder located at lan
 afterwards, it simply updates the config.json file to tell limbus to use the new localization file and thats that  
 <br>
 the reason i let people complete each step individually is so that they can try to mix and match things for potentially an even more humorous experience
+<br>
+this project should remain dependency-less, because otherwise it'll have to be compiled into an executable for the convenience of the average joe. this, as you may be acutely aware, obfuscates the source code, allowing me to realistically put anything into the program and eroding trust
