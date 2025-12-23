@@ -19,10 +19,9 @@ if not (platform in ('linux', 'win32')):
     txt.grid()
     tk.Button(wtf, text='ok i get it i wont try it again',command=quit).grid()
     window.mainloop()
-
-#if not locale.exists(): 
-    #print('grabbing fresh vanilla EN localization file')
-    #locale = 
+randomizeNames = tk.IntVar(wtf,value=1)
+namis = ('teller', 'title','name')
+dementia = tk.IntVar(wtf,value=0)
 
 randombsgo = ( # list of fields that can be just about any string value; used to grab all possible values and to 
 #figure out which ones to scramble
@@ -72,9 +71,11 @@ randombsgo = ( # list of fields that can be just about any string value; used to
 
 vals = []
 
-rnd = dict() # this was gonna be used to store values of specific fields, i got lazy
-for thing in randombsgo:
-    rnd[thing] = []
+def obfuscate(v):
+    nv=''
+    for i in v:
+        nv+=i if (randint(1, 10) <= 6) else '🤣'
+    return nv
 
 def harvestValues(obj): #crawl object for matching keys (fields), put into vals
     if type(obj) is dict:
@@ -92,16 +93,12 @@ def harvestValues(obj): #crawl object for matching keys (fields), put into vals
             else:
                 vals.append(g)
 
-def pickVal(original): #the value picker
+def pickVal(original, i): #the value picker
     n = randint(0, len(vals)-1)
     v = vals[n]
-    '''cntr=0
-    while len(v) > int(len(original)*1.25):
-        if cntr > max(len(vals)//15, 2): break
-        n = randint(0, len(vals)-1)
-        v = vals[n]
-        cntr+=1'''
     del vals[n]
+    if not randomizeNames.get() and i in namis: v = original
+    if dementia.get() and i in namis: v = obfuscate(v)
     return v
 
 def scrambleValues(obj): #crawl object for matching keys (fields), grab and remove valid values from vals, 
@@ -117,9 +114,9 @@ def scrambleValues(obj): #crawl object for matching keys (fields), grab and remo
         elif isstr:
             if type(obj) is dict:
                 if i in randombsgo:
-                    obj[i] = pickVal(v)
+                    obj[i] = pickVal(v,i)
             else:
-                obj[i] = pickVal(v)
+                obj[i] = pickVal(v,i)
     return obj
 
 def crawlFS(root, mode = 'r'): #crawl the filesystem for all text files to absolutely slaughter or to harvest their values
@@ -188,6 +185,7 @@ def grabvals():
     if (folds[0] in ('', None, ())) or (folds[1] in ('', None, ())): 
         tm.showerror('Error', foldErr) 
         return
+    vals.clear()
     crawlFS(Path(folds[0]))
 
 def scramble():
@@ -233,5 +231,7 @@ tk.Button(wtf, text='Grab all possible values from input folder', command=grabva
 tk.Button(wtf, text='Scramble values in working dir using values from ^', command=scramble).grid()
 tk.Button(wtf, text='Update Lang configs (to not have to select the doohickey)', command=updconf).grid()
 tk.Button(wtf, background="green", text='Dude i dont fucking care (complete every step at once; use this if you dont plan on messing with the above)', command=alloem).grid()
+tk.Checkbutton(wtf, text='Dementia', variable=dementia).grid()
+tk.Checkbutton(wtf, text='Randomize Names', variable=randomizeNames).grid()
 
 window.mainloop()
