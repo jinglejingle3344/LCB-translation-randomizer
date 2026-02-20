@@ -270,7 +270,7 @@ tk.Button(wtf, text='Update Lang configs (to not have to select the doohickey)',
 tk.Button(wtf, background="green", text='Dude i dont fucking care (complete every step at once; use this if you dont plan on messing with the above)', command=alloem).grid()
 tk.Checkbutton(wtf, text='Dementia', variable=dementia).grid()
 tk.Checkbutton(wtf, text='Randomize Names', variable=randomizeNames).grid()
-tk.Checkbutton(wtf, text='Delete harvested values after use (being placed into a random field)\nprobably set this to false if the input box below has a number > 1, or a range of numbers', variable=delv).grid()
+tk.Checkbutton(wtf, text='Delete harvested values after use (being placed into a random field)\nDO set this to false if the input box below has a number > 1, or a range of numbers', variable=delv).grid()
 tk.Label(wtf, text='How many times to add a random string to the field?\nSeparate 2 numbers with ~ to make it random (like 2~5)').grid()
 tk.Entry(wtf, textvariable=topick).grid()
 
