@@ -43,6 +43,30 @@
     {
       "id": 11,
       "content": "Pierce, Poise"
+    },
+    {
+      "id": 12,
+      "content": "Charge"
+    },
+    {
+      "id": 13,
+      "content": "Sinking"
+    },
+    {
+      "id": 14,
+      "content": "Sinking, Poise"
+    },
+    {
+      "id": 15,
+      "content": "Bleed, Envy"
+    },
+    {
+      "id": 16,
+      "content": "Sinking"
+    },
+    {
+      "id": 17,
+      "content": "Sinking"
     }
   ]
 }

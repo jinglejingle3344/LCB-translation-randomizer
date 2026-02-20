@@ -2386,22 +2386,26 @@
     {
       "id": "BlackCloud",
       "name": "Dark Cloud",
-      "desc": "Max Stack: 1\nConverts all of this unit's Base Attack Skill Coins used this turn to [Unbreakable Coins], prevents damage from Staggering this unit until Skill End, and inflict +1 more of Bleed effects\nOn Clash Lose: gain Final Power +3\nTurn End: this effect expires"
+      "desc": "Max Stack: 1\nConverts all of this unit's Base Attack Skill Coins used this turn to Unbreakable Coins, prevents damage from Staggering this unit until Skill End, and inflict +1 more of Bleed effects\nOn Clash Lose: gain Final Power +3\nTurn End: this effect expires",
+      "summary": "Converts Attack Skill to Unbreakable Coin and gains a new effect"
     },
     {
       "id": "BlackCloudBlade",
       "name": "Dark Cloud Blade",
-      "desc": "Max Stack: 1\nGain 1 Slash Power\nInflict 1 Bleed On Hit with Slash Skills"
+      "desc": "Max Stack: 1\nGain 1 Slash Power\nInflict 1 Bleed On Hit with Slash Skills",
+      "summary": "Enhance Slash Skills"
     },
     {
       "id": "EngageToBattle",
       "name": "Battle Ready",
-      "desc": "Max Value: 1\nBleed Potency and Count inflicted with this unit's Skill or Coin effects: +1\nGain 1 Slash Power Up and 3 Slash DMG Up for the duration of this Encounter"
+      "desc": "Max Value: 1\nBleed Potency and Count inflicted with this unit's Skill or Coin effects: +1\nGain 1 Slash Power Up and 3 Slash DMG Up for the duration of this Encounter",
+      "summary": "Enhance Slash Skills and inflict more Bleed"
     },
     {
       "id": "CloudWall",
       "name": "Cumulus Wall",
-      "desc": "Max Stack: 1\nDefense Skill Final Power +1\nThis effect expires at Turn End or after the following attack ends: 'Rules of the Backstreets'"
+      "desc": "Max Stack: 1\nDefense Skill Final Power +1\nThis effect expires at Turn End or after the following attack ends: 'Rules of the Backstreets'",
+      "summary": "Enhance Defense Skill"
     },
     {
       "id": "NebulizerExhale",
@@ -2619,27 +2623,27 @@
     {
       "id": "BulletPropellantAlly",
       "name": "Tigermark Round",
-      "desc": "- Unique Ammo\n- At 8+ (cumulative sum of Tigermark Rounds and Savage Tigermark Rounds spent), gain Unrelenting Spirit - Shin [剛氣-心] instead of Unrelenting Spirit [剛氣] from this unit's Passive\n- Cumulative Rounds spent: {0}\n- Max Capacity: 12",
+      "desc": "- Unique Ammo\n- At 8+ (cumulative sum of Tigermark Rounds and Savage Tigermark Rounds spent), gain Shin (心) - Tiantui Star [天退星] instead of Tiantui Star [天退星] from this unit's Passive\n- Cumulative Rounds spent: {0}\n- Max Capacity: 12",
       "summary": "",
       "undefined": "-"
     },
     {
       "id": "BulletPropellantSpecialAlly",
       "name": "Savage Tigermark Round",
-      "desc": "- Unique Ammo\n- At 8+ (cumulative sum of Tigermark Rounds and Savage Tigermark Rounds spent), gain Unrelenting Spirit - Shin [剛氣-心] instead of Unrelenting Spirit [剛氣] from this unit's Passive\n- Cumulative Rounds spent: {0}\n- Actives the same way as Tigermark Round does\n- Max Capacity: 8",
+      "desc": "- Unique Ammo\n- At 8+ (cumulative sum of Tigermark Rounds and Savage Tigermark Rounds spent), gain Shin (心) - Tiantui Star [天退星] instead of Tiantui Star [天退星] from this unit's Passive\n- Cumulative Rounds spent: {0}\n- Actives the same way as Tigermark Round does\n- Max Capacity: 8",
       "summary": "",
       "undefined": "-"
     },
     {
       "id": "IrritationAlly",
-      "name": "Unrelenting Spirit [剛氣]",
-      "desc": "- Min & Max Speed +1\n- If this unit's Speed is faster than the target's by 3 or more, deal +(Speed difference x 2.5)% damage (max 20%)\n- Inflict +1 more Tremor Potency and Tremor Count with this unit's Skills\n- If this unit has spent 8+ (sum of Tigermark Round and Savage Tigermark Round): at Turn End, convert this buff to Unrelenting Spirit - Shin [剛氣-心] next turn\n- Max Stack: 1",
+      "name": "Tiantui Star [天退星]",
+      "desc": "- Min & Max Speed +1\n- If this unit's Speed is faster than the target's by 3 or more, deal +(Speed difference x 2.5)% damage (max 20%)\n- Inflict +1 more Tremor Potency and Tremor Count with this unit's Skills\n- If this unit has spent 8+ (sum of Tigermark Round and Savage Tigermark Round): at Turn End, convert this buff to Shin (心) - Tiantui Star [天退星] next turn\n- Max Stack: 1",
       "summary": "",
       "undefined": "-"
     },
     {
       "id": "HugeIrritationAlly",
-      "name": "Unrelenting Spirit - Shin [剛氣-心]",
+      "name": "Shin (心) - Tiantui Star [天退星]",
       "desc": "- Min & Max Speed +3\n- If this unit's Speed is faster than the target's by 3 or more, deal +(Speed difference x 5)% damage (max 40%)\n- Inflict +2 more Tremor Potency and Tremor Count with this unit's Skills\n- Max Stack: 1",
       "summary": "",
       "undefined": "-"
@@ -2909,7 +2913,7 @@
     {
       "id": "FocusOnActing",
       "name": "Focused Performance",
-      "desc": "- Max Stack: 3\n- <La Manchaland> Identities only; includes Empowered Skills\n- Skill 1 and Skill 2 gain Final Power +1; deal +5% damage for every Stack (max 15%)\n- Skill 3 gains Final Power +2; deals +10% damage for every Stack (max 30%)\n- After attacking with Skill 3, or at Turn Start, if this unit does not have Hardblood Armor, lose 1 Stack",
+      "desc": "- Max Stack: 3\n- <La Manchaland> Identities only; includes Empowered Skills\n- Skill 1 and Skill 2 gain Final Power +1; deal +5% damage for every Stack (max 15%)\n- Skill 3 gains Final Power +2; deals +10% damage for every Stack (max 30%)\n- Lose 1 Stack when:\n  1) After attacking with Skill 3\n  2) If this unit does not have Hardblood Armor at Turn Start",
       "summary": "On Hit, deal more damage",
       "undefined": "-"
     },
@@ -3038,6 +3042,311 @@
       "desc": "- Max Stack: 2\n- Take (Stack x 10)% less damage\n- Turn Start: Gain Shield by Poise on self (max 20)\n- Turn End: Gain 3 Poise Potency and +1 Poise Count; this unit's leftmost Skill Slot gains +5 Aggro next turn\n- Turn End: Lose 1 Stack",
       "summary": "Take less damage",
       "undefined": "-"
+    },
+    {
+      "id": "TheUdjatOutis",
+      "name": "The Udjat [Vanguard]",
+      "desc": "- Max Stack: 2\n- Min & Max Speed +3\n- Combat Start: gain 1 Protection\n- Gain the following effects during the Combat Phase (once per Skill, 3 times per turn)\n· When this unit is the main target of an Unopposed Attack Skill, halve the chance for the Skill's first Coin to flip Heads\n· Clash Start: In the first Clash, halve the target's chance to flip Heads for all of its Coins\n· For both of the above effects, if the target uses Minus Coins, halve their chance to flip Tails instead\n- Turn End: Reduce 1 Stack",
+      "summary": "",
+      "undefined": "-"
+    },
+    {
+      "id": "BlueSand",
+      "name": "Blue Sand",
+      "desc": "- On Clash Lose, gain +1 Sinking Count (3 times per turn)\n- Units with SP: change their Panic Type to \"Blue Sand\"\n- Units without SP: Min & Max Speed -1\n- Turn End: Reduce 1 Stack\n- This effect is not cumulative; inflicting it will replace the current value with the inflicted value\n- Apply the \"Units without SP\" conditional to certain enemies that have SP but can't change their Panic Types\n\n※ Blue Sand Panic Effects\n- Low Morale: Clash Power -1, Min & Max Speed -1\n- Panic: Clash Power -2, Min & Max Speed -1",
+      "summary": "",
+      "undefined": "-"
+    },
+    {
+      "id": "BlueSand_Main",
+      "name": "Blue Sand",
+      "desc": "- On Clash Lose, gain +1 Sinking Count (3 times per turn)\n- Units with SP: change their Panic Type to \"Blue Sand\"\n- Turn End: Reduce 1 Stack",
+      "summary": "On Clash Lose, gain +1 Sinking Count (3 times per turn)\n- Units with SP: change their Panic Type to \"Blue Sand\"",
+      "undefined": "-"
+    },
+    {
+      "id": "BlueSand_Sub",
+      "name": "Blue Sand",
+      "desc": "- On Clash Lose, gain +1 Sinking Count (3 times per turn)\n- Units without SP: Min & Max Speed -1\n- Turn End: Reduce 1 Stack",
+      "summary": "On Clash Lose, gain +1 Sinking Count (3 times per turn)\n- Units without SP: Min & Max Speed -1",
+      "undefined": "-"
+    },
+    {
+      "id": "BlueSand_LowMorale",
+      "name": "Blue Sand",
+      "desc": "- Low Morale\n- Clash Power -1\n- Min & Max Speed -1",
+      "summary": "Clash Power -1 on self",
+      "undefined": "-"
+    },
+    {
+      "id": "BlueSand_Panic",
+      "name": "Blue Sand",
+      "desc": "- Panic\n- Clash Power -2\n- Min & Max Speed -1",
+      "summary": "Clash Power -2 on self",
+      "undefined": "-"
+    },
+    {
+      "id": "SheutFracture",
+      "name": "Sheut Fracture",
+      "desc": "- Max Stack: 10\n- Unique Sinking\n- For every Stack, take +1% more damage from Sloth and Gloom Skills\n- At max Stack, gain 1 Gloom Fragility (once per turn), take Gloom damage equal to Sinking Potency on self(lose 1 Sinking Count), then expires\n- If the unit with this effect dies, transfer half of its Stack to its ally with the highest SP (rounded down)\n- Turn Start: If there are no LCA Identities on the field, expires",
+      "summary": "",
+      "undefined": "-"
+    },
+    {
+      "id": "LCA_Bullet",
+      "name": "LCA Fracture Round",
+      "desc": "- Max Capacity: 16\n- Unique Ammo\n- Spent by certain Skills\n- Some attacks cancel if lacking Ammo",
+      "summary": "",
+      "undefined": "-"
+    },
+    {
+      "id": "NiddleEGO",
+      "name": "Needle",
+      "desc": "- Unique Bleed\n- When taking Envy damage, gain +1 Bleed Count and reduce this effect's Stack by 1\n- Turn End: Gain 1 Bleed and reduce this effect's Stack by 1",
+      "summary": "Gain Bleed Count",
+      "undefined": "-"
+    },
+    {
+      "id": "IDMicroChip",
+      "name": "Resident Reg. Microchip",
+      "desc": "- Max Stack: 2\n- Take +10% damage from Wrath and Envy Skills\n- On Clash Lose, gain 1 Burn (3 times per turn)\n- Turn End: Lose 1 Stack",
+      "summary": "",
+      "undefined": "-"
+    },
+    {
+      "id": "ExtractCoin",
+      "name": "Excision Coin",
+      "desc": "- This Coin can destroy Unbreakable Coins in a Clash.\n- This coin does not break upon Clash Lose.\n- If an Attack Skill has this Coin, attack with this Coin after getting hit.\n- Upon Clash Lose, fix the Coin Power of the unbroken Coin to 1",
+      "summary": ""
+    },
+    {
+      "id": "ReinforcedTattooIshmael",
+      "name": "The Middle Styled Augmentation Tattoos",
+      "desc": "- Max Stack: 10\n- Final Power +1 for Base Skills for every 5 Stack (max 2)\n- Envy Skills and Blunt Skills deal +5% damage for every Stack (max 50%)",
+      "summary": "",
+      "undefined": "-"
+    },
+    {
+      "id": "ResentmentIshmael",
+      "name": "The Middle - Grudge",
+      "desc": "- Max Stack: 15\n- If target has Vengeance Mark, deal +20% damage",
+      "summary": "",
+      "undefined": "-"
+    },
+    {
+      "id": "HeatingWireIshmael",
+      "name": "Thermal Blades",
+      "desc": "- Max Stack: 2\n- If target hit by Base Skills has Burn, heal 3 SP (2 times per turn)\n- Inflict Burn when inflicting Bleed with certain Skill Coins\n- Turn End: Lose 1 Stack",
+      "summary": "",
+      "undefined": "-"
+    },
+    {
+      "id": "LanternGregBigBird",
+      "name": "Lamp",
+      "desc": "- Max Stack: 8\n- Turn End: Gain 1 Bind next turn for every 2 Stack (max 4)\n- Turn End: At max Stack, if there are enemies on the field, consume all Stack to activate the following effects next turn:\n• Gain +10 Aggro to the leftmost Slot\n• Inflict 3 Dazzle to the enemy(Core) with the most current HP",
+      "summary": "Gain Bind next turn",
+      "undefined": "-"
+    },
+    {
+      "id": "ObedienceGregBigBird",
+      "name": "Guardians of the Forest",
+      "desc": "Before Attack, activate the following effects:\n- Plus Coin Skills heal 4 SP (if already at max SP, gain 2 Offense Level Up next turn)\n- Minus Coin Skills lose 8 SP (this effect cannot reduce the unit's SP below -40)\n- Lose this effect",
+      "summary": "",
+      "undefined": "-"
+    },
+    {
+      "id": "DelusionGregBigBird",
+      "name": "Dazzle",
+      "desc": "- For every 1 (Sinking + Burn), take +0.5% damage from Base Attack Skills (max 10%)\n- Units with SP: Change their Panic Type to \"Dazzle\"\n- Units without SP: Defense Level -2\n- Turn End: Lose 1 Stack\n- This effect is not cumulative; inflicting it will replace the current value with the inflicted value\n- Apply the \"Units without SP\" conditional to certain enemies that have SP but can't change their Panic Types\n\n※ Dazzle Panic-type Effects\n- Low Morale: Turn End: Gain 1 Bind and 2 Offense Level Down next turn\n- Panic: Turn End: Gain 1 Bind and 4 Offense Level Down next turn",
+      "summary": "For every 1 (Sinking + Burn), take +0.5% damage from Base Attack Skills (max 10%)\nUnits with SP: Change their Panic Type to \"Dazzle\"\nUnits without SP: Defense Level -2",
+      "undefined": "-"
+    },
+    {
+      "id": "DelusionGregBigBird_Main",
+      "name": "Dazzle",
+      "desc": "- For every 1 (Sinking + Burn), take +0.5% damage from Base Attack Skills (max 10%)\n- Units with SP: Change their Panic Type to \"Dazzle\"\n- Turn End: Lose 1 Stack",
+      "summary": "For every 1 (Sinking + Burn), take +0.5% damage from Base Attack Skills (max 10%)\nChange Panic Type to \"Dazzle\"",
+      "undefined": "-"
+    },
+    {
+      "id": "DelusionGregBigBird_Sub",
+      "name": "Dazzle",
+      "desc": "- For every 1 (Sinking + Burn), take +0.5% damage from Base Attack Skills (max 10%)\n- Units without SP: Defense Level -2\n- Turn End: Lose 1 Stack",
+      "summary": "For every 1 (Sinking + Burn), take +0.5% damage from Base Attack Skills (max 10%)\nDefense Level -2",
+      "undefined": "-"
+    },
+    {
+      "id": "DelusionGregBigBird_LowMorale",
+      "name": "Dazzle",
+      "desc": "- Low Morale\n- Turn End: Gain 1 Bind and 2 Offense Level Down next turn",
+      "summary": "Turn End: Gain 1 Bind and 2 Offense Level Down next turn",
+      "undefined": "-"
+    },
+    {
+      "id": "DelusionGregBigBird_Panic",
+      "name": "Dazzle",
+      "desc": "- Panic\n- Turn End: Gain 1 Bind and 4 Offense Level Down next turn",
+      "summary": "Turn End: Gain 1 Bind and 4 Offense Level Down next turn",
+      "undefined": "-"
+    },
+    {
+      "id": "LittleFingerID",
+      "name": "Moonlit Azure Blade",
+      "desc": "- Max Stack: 20\n- Turn Start: Gain 2 Shield for every Stack\n- Deal +1% damage on Critical Hit for every Stack",
+      "summary": "",
+      "undefined": "-"
+    },
+    {
+      "id": "IndexPrescriptYi_0",
+      "name": "Prescript: [Device] I",
+      "desc": "Use a Skill marked with Mark of the Prescript or hit a target with a marked Skill.\n\n- Turn Start: Gain this effect when this unit has no Unlock\n- Maximum stackable Grace of the Prescript with this Prescript is limited to 3",
+      "summary": "",
+      "undefined": "-",
+      "flavor": "The Prescripts are delivered by many means, their medium determined with finality akin to divine prophecy. Those who receive them hold no power over how they arrive."
+    },
+    {
+      "id": "IndexPrescriptYi_1",
+      "name": "Prescript: [Device] II",
+      "desc": "Hit a target with a Skill marked with Mark of the Prescript.\n\n- Turn Start: Gain this effect if this unit has Unlock - I\n- Maximum stackable Grace of the Prescript with this Prescript is limited to 6",
+      "summary": "",
+      "undefined": "-",
+      "flavor": "The Prescripts are delivered by many means, their medium determined with finality akin to divine prophecy. Those who receive them hold no power over how they arrive."
+    },
+    {
+      "id": "IndexPrescriptYi_2",
+      "name": "Prescript: [Device] III",
+      "desc": "Gain Procuration [Hermes]. Repeat this Prescript until Procuration [Hermes] reaches 9 Stacks.\n\n- Turn Start: Gain this effect if this unit has Unlock - II\n- Maximum stackable Grace of the Prescript with this Prescript is limited to 9",
+      "summary": "",
+      "undefined": "-",
+      "flavor": "The Prescripts are delivered by many means, their medium determined with finality akin to divine prophecy. Those who receive them hold no power over how they arrive."
+    },
+    {
+      "id": "IndexPrescriptYi_3",
+      "name": "Prescript: [Device] IV",
+      "desc": "Eliminate all enemies before the next Prescript arrives.\n\n- Turn Start: Gain this effect if this unit has Unlock - III",
+      "summary": "",
+      "undefined": "-",
+      "flavor": "The Prescripts are delivered by many means, their medium determined with finality akin to divine prophecy. Those who receive them hold no power over how they arrive."
+    },
+    {
+      "id": "StackYisangSpecialSkill",
+      "name": "Procuration [Hermes]",
+      "desc": "- Turn Start: At 9 Stack, a powerful Skill becomes available\n- Can be gained up to (Unlock stage + 2) Stack per turn\n- Max Stack: 9\n· At below Unlock - II, this effect's maximum Stack is limited to 8",
+      "summary": "",
+      "undefined": "-",
+      "flavor": ""
+    },
+    {
+      "id": "Shin_IndexFingerYisang",
+      "name": "Shin (心) - Fate",
+      "desc": "- Min & Max Speed +1\n- Gain +1 more Poise Potency and Count from Base Skills\n- If this unit's SP is higher than the target's, deal +1% damage for every 3 SP difference (max 15%; units without SP are considered to be at 0 SP)",
+      "summary": "",
+      "undefined": "-",
+      "flavor": ""
+    },
+    {
+      "id": "BurningWoundYisangMask",
+      "name": "Wound-casing Mask",
+      "desc": "- Offense Level +2, Defense Level -2\n- Take -10% damage from Unopposed Attacks",
+      "summary": "",
+      "undefined": "-",
+      "flavor": ""
+    },
+    {
+      "id": "BurningWoundYisang",
+      "name": "Sizzling Wound",
+      "desc": "- Offense Level +3, Defense Level -3\n- Take -25% damage from Unopposed Attacks\n- Turn Start: Gain 1 Burn and 1 Bleed\n- Deal +15% damage with Base Attack Skill's Unbreakable Coins",
+      "summary": "",
+      "undefined": "-",
+      "flavor": ""
+    },
+    {
+      "id": "BlackNightmareYisang",
+      "name": "Indulgence in Prescripts",
+      "desc": "- Min & Max Speed +5\n- Apply the following effects to 'Furioso-Replica':\n· On Hit, inflict +1 more Sinking Potency and gain +1 more Poise Potency\n· On Hit, inflict +3 Sinking Count (once per target)\n· Deal +30% damage\n- Expires at Turn End",
+      "summary": "",
+      "undefined": "-",
+      "flavor": ""
+    },
+    {
+      "id": "YisangWeapon01Hatchet",
+      "name": "When hacking through the ribs with a hatchet...",
+      "desc": "- This Coin deals Blunt damage\n- On Hit without Cracking, gain 2 Poise",
+      "summary": "",
+      "undefined": "-",
+      "flavor": ""
+    },
+    {
+      "id": "YisangWeapon02Stiletto",
+      "name": "When penetrating the lungs with a stiletto...",
+      "desc": "- This Coin deals Pierce damage\n- On Hit without Cracking, inflict 2 Sinking",
+      "summary": "",
+      "undefined": "-",
+      "flavor": ""
+    },
+    {
+      "id": "YisangWeapon03Greatsword",
+      "name": "When cleaving through the shoulder and the skull with a bastard sword...",
+      "desc": "- This Coin deals Slash damage\n- This Coin deals +5% damage\n- On Hit without Cracking, gain 1 Offense Level Up next turn (2 times per turn)",
+      "summary": "",
+      "undefined": "-",
+      "flavor": ""
+    },
+    {
+      "id": "YisangWeapon04Rapier",
+      "name": "When punching 10 or more holes in the torso with a rapier...",
+      "desc": "- This Coin deals Pierce damage\n- This Coin deals +5% damage\n- On Hit without Cracking, inflict 1 Defense Level Down next turn (2 times per turn)",
+      "summary": "",
+      "undefined": "-",
+      "flavor": ""
+    },
+    {
+      "id": "YisangWeapon05Sledgehammer",
+      "name": "When caving in the back of the skull with a hammer...",
+      "desc": "- This Coin deals Blunt damage\n- This Coin deals +5% damage\n- On Hit without Cracking, raise target's Stagger Threshold by 3",
+      "summary": "",
+      "undefined": "-",
+      "flavor": ""
+    },
+    {
+      "id": "YisangWeapon06Ultragreatsword",
+      "name": "When rending the body with a great sword...",
+      "desc": "- This Coin deals Slash damage\n- This Coin deals +15% damage\n- On Hit without Cracking, inflict 1 Slash Fragility until next turn (2 times per turn)",
+      "summary": "",
+      "undefined": "-",
+      "flavor": ""
+    },
+    {
+      "id": "YisangWeapon07Lance",
+      "name": "When boring a 20-inch hole with a lance...",
+      "desc": "- This Coin deals Pierce damage\n- This Coin deals +15% damage\n- On Hit without Cracking, inflict 1 Pierce Fragility until next turn (2 times per turn)",
+      "summary": "",
+      "undefined": "-",
+      "flavor": ""
+    },
+    {
+      "id": "YisangWeapon08Chain",
+      "name": "When ripping the flesh to ten thousand strips with a whip...",
+      "desc": "- This Coin deals Blunt damage\n- This Coin deals +15% damage\n- On Hit without Cracking, inflict 1 Blunt Fragility until next turn (2 times per turn)",
+      "summary": "",
+      "undefined": "-",
+      "flavor": ""
+    },
+    {
+      "id": "YisangWeapon09Scythe",
+      "name": "When lacerating through space itself with a scythe, like a certain someone...",
+      "desc": "- This Coin deals Slash damage\n- This Coin deals +30% damage\n- On Hit without Cracking, it hits a guaranteed Crit",
+      "summary": "",
+      "undefined": "-",
+      "flavor": ""
+    },
+    {
+      "id": "SatisfyingEsteemNeeds",
+      "name": "Desire for Acknowledgement Sated",
+      "desc": "- Deal +7.5% damage with Skills marked with Mark of the Prescript\n- Deal +7.5% damage against The Prescript's Targets",
+      "summary": "",
+      "undefined": "-",
+      "flavor": ""
     }
   ]
 }

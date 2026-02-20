@@ -57,6 +57,10 @@
       "description": "<color=#f8c200>When choosing a new Theme Pack for the first time(in Floor {4} or lower only), gain {2} {1} in its combat Encounters</color>"
     },
     {
+      "id": "GiveBuffOnRSOnThemePackUnlockCount",
+      "description": "<color=#f8c200>If {4}+ Theme Packs are unlocked in the Theme Pack Compendium, gain {2} {1}</color>"
+    },
+    {
       "id": "ADDITIONAL_START_EGO_GIFT_SELECT",
       "description": "Starting <color=#5bffde>E.G.O Gift</color> Choice +{0}"
     },
@@ -170,7 +174,7 @@
     },
     {
       "id": "ACQUIRE_3_TIER_RANDOM_KEYWORD_EGO_GIFT_ON_ENTER_1ST_FLOOR_TEXT_HIGHLIGHT",
-      "description": "Upon entry, gain {0} Tier 3 <color=#5bffde>E.G.O Gift(s)</color> <color=#f8c200>of your choice</color> for the selected Keyword (if no remaining Gifts meet the conditions, a lower Tier one will appear instead)"
+      "description": "Upon entry, gain <color=#f8c200>{0} Tier 3</color> <color=#5bffde>E.G.O Gift(s)</color> <color=#f8c200>of your choice</color> for the selected Keyword (if no remaining Gifts meet the conditions, a lower Tier one will appear instead)"
     }
   ]
 }

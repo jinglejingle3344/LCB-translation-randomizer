@@ -1094,7 +1094,7 @@
     {
       "id": 1050811,
       "name": "Swordplay of the Homeland",
-      "desc": "In this Encounter, when this unit takes damage that brings their HP down to 0, nullify that damage; then, this unit's HP cannot drop below 1 for the turn. (Once per Encounter)\n\nWhen this unit gains [Breath] Potency/Count with its own Skill or Coin effects: give 1 [Breath] Potency and +1 [Breath] Count to 2 other Blade Lineage allies with no [Breath] or with the least [Breath]\n- If there are 6 or more Blade Lineage allies participating in this Encounter, give 2 [Breath] Potency and +2 [Breath] Count instead\n\nCombat Start: Apply [SwordPlayOfTheHomeland] buff to all other Blade Lineage allies"
+      "desc": "In this Encounter, when this unit takes damage that brings their HP down to 0, nullify that damage; then, this unit's HP cannot drop below 1 for the turn. (Once per Encounter)\n\nWhen this unit gains [Breath] Potency/Count with its own Skill or Coin effects: give 1 [Breath] Potency and +1 [Breath] Count to 2 other Blade Lineage allies with no [Breath] or with the least [Breath]\n- If there are 6 or more Blade Lineage allies participating in this Encounter, give 2 [Breath] Potency and +2 [Breath] Count instead\n\n<style=\"highlight\">Combat Start: Apply [SwordPlayOfTheHomeland] buff to all other Blade Lineage allies</style>"
     },
     {
       "id": 1050821,
@@ -1343,7 +1343,7 @@
     },
     {
       "id": 999906,
-      "name": "Shin (心)",
+      "name": "Shin (心) - The Red Gaze",
       "desc": "Generates Mang based on SP",
       "summary": ""
     },
@@ -2012,7 +2012,8 @@
     {
       "id": 1121101,
       "name": "I'm the only survivor...",
-      "desc": "Deal +0.2% damage for every [FirePunchFuel] and [FirePunchFuelOverheated] this unit consumed in this Encounter (max 40%)\n- If the main target is a <Bloodfiend>, <Bloodbag>, or if they have 30+ ([Combustion] + [Combustion] Count), deal +0.3% damage instead (max 60%)\n\nAt 1+ [FirePunchFuel] or [FirePunchFuelOverheated], if this unit Staggers or defeats enemies with [Combustion], inflict +2 [Combustion] Count against 2 random enemies without [Combustion] or with the least [Combustion] Count (once per turn)\n- For Focused Encounters, on Parts"
+      "desc": "Deal +0.2% damage for every [FirePunchFuel] and [FirePunchFuelOverheated] this unit consumed in this Encounter (max 40%)\n- If the main target is a <Bloodfiend>, <Bloodbag>, or if they have 30+ ([Combustion] + [Combustion] Count), deal +0.3% damage instead (max 60%)\n\nAt 1+ [FirePunchFuel] or [FirePunchFuelOverheated], if this unit Staggers or defeats enemies with [Combustion], inflict +2 [Combustion] Count against 2 random enemies without [Combustion] or with the least [Combustion] Count (once per turn)\n- For Focused Encounters, on Parts",
+      "summary": "Deal more damage based on [FirePunchFuel] and [FirePunchFuelOverheated] consumed\nInflict [Combustion] Count against 2 random enemies (once per turn)"
     },
     {
       "id": 1121121,
@@ -2578,6 +2579,191 @@
       "id": 1091421,
       "name": "Carol of Dying Comrades",
       "desc": "1 ally with the lowest SP: Skills that consume [Charge] or Unique Charge[TabExplain] and have effects that inflict [Sinking] against enemies deal +10% damage (except E.G.O Skills)"
+    },
+    {
+      "id": 1111401,
+      "name": "Vanguard Team",
+      "desc": "Deal +5% damage for every [Protection] on self (max 15%)\n\nCombat Start: gain 2 [TheUdjatOutis]",
+      "summary": ""
+    },
+    {
+      "id": 1111402,
+      "name": "The Scepter of Horus - Replica",
+      "desc": "Turn Start: If an enemy has any of the Panic type changing effects, gain 1 [TheUdjatOutis]\n\nIf this unit has [TheUdjatOutis], inflict 1 [SheutFracture] On Hit with a Base Attack Skill (15 per turn)\n\n[Protection] Stack gained from this unit's Base Skills and [TheUdjatOutis] effect is capped at 5 per turn",
+      "summary": ""
+    },
+    {
+      "id": 1111412,
+      "name": "The Scepter of Horus - Replica",
+      "desc": "Turn Start: If an enemy has any of the Panic type changing effects, gain 1 [TheUdjatOutis]\n\nIf this unit has [TheUdjatOutis], inflict 1 [SheutFracture] On Hit with a Base Attack Skill (15 per turn)\n<style=\"highlight\">- If [LCA_Bullet] was spent, inflict additional [SheutFracture] per [LCA_Bullet] spent</style>\n\n[Protection] Stack gained from this unit's Base Skills and [TheUdjatOutis] effect is capped at 5 per turn",
+      "summary": ""
+    },
+    {
+      "id": 1111421,
+      "name": "Eagle Eye",
+      "desc": "Combat Start: apply 1 [Protection] next turn to 1 ally with the lowest HP percentage",
+      "summary": "Gain Protection"
+    },
+    {
+      "id": 1021402,
+      "name": "Prescript Delivered on Paper Slips",
+      "desc": "Turn Start:\n- Gain [IndexPrescriptFaust_0] / [IndexPrescriptFaust_1] / [IndexPrescriptFaust_2] / [IndexPrescriptFaust_3] based on [BlessingOfIndexPrescriptAlly] on self\n- Inflict [IndexPrescriptTargetToEnemy] to a random enemy (in Focused Encounters, the Part)\n- Apply [IndexPrescriptTargetMarkToEnemy] to Base Attack Skills on this unit's Dashboard (1 per Slot, max 2 Skills)\n· At 6+ [BlessingOfIndexPrescriptAlly], the effect above prioritizes Skill 3\n- All of the effects above and [IndexPrescript_Base] execution checks do not trigger when this unit is Staggered, Immobilized[TabExplain], in Panic, or in E.G.O Corrosion[TabExplain]",
+      "summary": "Gain Prescript\nInflict 'The Prescript's Target' to random target\nApply 'Mark of the Prescript' on a Base Attack Skill"
+    },
+    {
+      "id": 1021403,
+      "name": "Will of the Prescript",
+      "desc": "Turn End: If [IndexPrescript_Base] was executed this turn, heal 4 SP and gain 1 [BlessingOfIndexPrescriptAlly] (once per turn)\n- When executing [IndexPrescript_Base], if the main target has [IndexPrescriptTargetToEnemy], heal 8 SP and gain 3 [BlessingOfIndexPrescriptAlly] instead\n\nTurn End: If [IndexPrescript_Base] was not executed this turn, gain 5 [KarmaOfIndexAlly]\n- At 9 [BlessingOfIndexPrescriptAlly], does not gain [KarmaOfIndexAlly]\n- If this unit attempted to execute [IndexPrescript_Base] at Combat Start, but could not target the enemy during the combat phase, does not gain [KarmaOfIndexAlly]",
+      "summary": "Upon executing Prescript, heal SP and gain Grace of the Prescript\nUpon failing Prescript, gain Karmic Consequence"
+    },
+    {
+      "id": 1021401,
+      "name": "Proselyte's Blade",
+      "desc": "Deal +2% damage with Skills marked with [IndexPrescriptTargetMarkToEnemy] for every [BlessingOfIndexPrescriptAlly] on self (max 16%)\n- At 9 [BlessingOfIndexPrescriptAlly], deal +20% damage with Base Skills instead\n\nOn Hit with a Base Skill against target with [IndexPrescriptTargetToEnemy], gain 1 [Breath] and inflict 1 [Sinking] (once per turn)\n- Increase the number of times this effect can trigger per turn by 1 for every 3 [BlessingOfIndexPrescriptAlly] (max 2)\n\n- At 9 [BlessingOfIndexPrescriptAlly], Base Skills inflict +1 more [Sinking] Potency and this unit gains +1 more [Breath] Potency",
+      "summary": "Skills marked with Mark of the Prescript deal more damage based on Grace of the Prescript Stack\nOn Hit, gain Poise and inflict Sinking"
+    },
+    {
+      "id": 1021421,
+      "name": "As the Prescript Orders...",
+      "desc": "Effects apply to the Identity with the earliest Deployment order\n- Prioritizes The Index Identities\n\nCombat Start: If this unit's leftmost Skill on the Dashboard and other allies target the same enemy Slot, said Skill deals +5% damage for every ally targeting the same Slot excluding this unit (max 15%, applies when this unit and allies both use Base Attack Skills to main-target enemy Slot)",
+      "summary": "Deal more damage based on number of other units that targeted the slot"
+    },
+    {
+      "id": 1031402,
+      "name": "Prescript Delivered on a Device",
+      "desc": "Turn Start:\n- Gain [IndexPrescriptDon_0] / [IndexPrescriptDon_1] / [IndexPrescriptDon_2] / [IndexPrescriptDon_3] based on [UnlockBuff_Base] stage on self\n- Inflict [IndexPrescriptTargetToEnemy] to a random enemy (in Focused Encounters, the Part)\n- Apply [IndexPrescriptTargetMarkToEnemy] to Base Attack Skills on this unit's Dashboard (1 per Slot, max 2 Skills)\n· At [UnlockBuffAlly_2]+, the effect above prioritizes Skill 3\n- All of the effects above and [IndexPrescript_Base_2nd] execution checks do not trigger when this unit is Staggered, Immobilized[TabExplain], in Panic, or in E.G.O Corrosion[TabExplain]\n\nIf this unit has [UnlockBuffAlly_3] at Turn Start, gain [Blandishment_Shin]",
+      "summary": "Gain Prescript\nInflict The Prescript's Target to random target\nApply Mark of the Prescript on a Base Attack Skill"
+    },
+    {
+      "id": 1031403,
+      "name": "Will of the Prescript",
+      "desc": "Turn End: If [IndexPrescript_Base_2nd] was executed this turn, heal 4 SP and gain 1 [BlessingOfIndexPrescriptAlly] (once per turn)\n- When executing [IndexPrescript_Base_2nd], if the main target has [IndexPrescriptTargetToEnemy], heal 8 SP and gain 3 [BlessingOfIndexPrescriptAlly] instead\n\nTurn End: If [IndexPrescript_Base_2nd] was not executed this turn, gain 5 [KarmaOfIndexAlly]\n- At [UnlockBuffAlly_3], does not gain [KarmaOfIndexAlly]\n- If this unit attempted to execute [IndexPrescript_Base_2nd] at Combat Start, but could not target the enemy during the combat phase, does not gain [KarmaOfIndexAlly] at Turn End",
+      "summary": "Upon executing Prescript, heal SP and gain Grace of the Prescript\nUpon failing Prescript, gain Karmic Consequence"
+    },
+    {
+      "id": 1031404,
+      "name": "Unlock / Effloresced E.G.O::Procuration",
+      "desc": "Turn End: At 3/6/9 [BlessingOfIndexPrescriptAlly], gain [UnlockBuffAlly_1]/[UnlockBuffAlly_2]/[UnlockBuffAlly_3].\n\nIf this unit gained [UnlockBuffAlly_1], consume 15 SP to enter <noparse>Effloresced</noparse> E.G.O::Procuration state:\n- Before consuming SP to enter this state, heal SP to 25 and gain [KarmaOfIndexAlly] equal to (SP healed / 5) (rounded up)\n- At Turn Start after the above checks, if this unit has [UnlockBuff_Base] and is at 25+ SP, consume 15 SP to enter this state\n\n- If this unit gets Staggered when entering <noparse>Effloresced</noparse> E.G.O::Procuration state, recover from Stagger (if this unit's Stagger cannot be naturally recovered from, does not enter <noparse>Effloresced</noparse> E.G.O::Procuration state)\n- Gain [Blandishment] while in <noparse>Effloresced</noparse> EGO::Procuration state\n\nTurn Start: At 0 or less SP, this unit exits <noparse>Effloresced</noparse> E.G.O::Procuration state"
+    },
+    {
+      "id": 1031401,
+      "name": "The Great Magicked Beeper Knoweth My Desire!",
+      "desc": "Deal +2% damage with Skills marked with [IndexPrescriptTargetMarkToEnemy] for every [BlessingOfIndexPrescriptAlly] on self (max 16%)\n- At 9 [BlessingOfIndexPrescriptAlly], deal +20% damage with Base Skills instead\n\nOn hit with Base Skill attacks against targets with [IndexPrescriptTargetToEnemy], heal 3 SP (once per Skill; 2 times per turn)\n- Heal additional SP based on [UnlockBuff_Base] stage",
+      "summary": "Skills marked with Mark of the Prescript deal more damage based on Grace of the Prescript Stack\nOn Hit, heal SP"
+    },
+    {
+      "id": 1031421,
+      "name": "This, too, is the Grace of the Great Magicked Beeper!",
+      "desc": "Combat Start: Heal 15 SP for the ally with the lowest SP\n- This effect prioritizes Plus Coin Identities\n- If the affected unit is in The Index faction, they gain 1 [AttackDmgUp] as well\n- This effect does not apply to units under effects that prevent SP recovery such as E.G.O Corrosion[TabExplain], Panic, etc."
+    },
+    {
+      "id": 1081401,
+      "name": "The Middle Never Forgets, Y'know?",
+      "desc": "Turn End: Inflict [RetaliationBook] to the enemy that dealt the most Skill damage to an ally this turn\n\nEvery time this unit is hit by an enemy, gain 2 [ResentmentIshmael] (2 times per turn)\nWhen an other The Middle-faction ally is hit by an enemy, gain 1 [ResentmentIshmael] (once per turn per Identity)\n\nGain 1 [ReinforcedTattooIshmael] every time this unit consumes 5 [ResentmentIshmael] (2 times per turn)\n\nCombat Start: If this unit does not have [HeatingWireIshmael], and at 3+ Envy Reson., gain 2 [HeatingWireIshmael] next turn\nCombat Start: If this unit has [HeatingWireIshmael], gain (Envy Reson. / 3) [HeatingWireIshmael] at Turn End (max 2)"
+    },
+    {
+      "id": 1081411,
+      "name": "The Middle Never Forgets, Y'know?",
+      "desc": "Turn End: Inflict [RetaliationBook] to the enemy that dealt the most Skill damage to an ally this turn\n\nEvery time this unit is hit by an enemy, gain 2 [ResentmentIshmael] (2 times per turn)\nWhen an other The Middle-faction ally is hit by an enemy, gain 1 [ResentmentIshmael] (once per turn per Identity)\n<style=\"highlight\">- If the target that attacked this unit or an ally has [RetaliationBook], gain 1 more [ResentmentIshmael]\n- Combat Start: If the Dashboard has Envy A-Reson., double the amount of [ResentmentIshmael] gained this turn</style>\n\nGain 1 [ReinforcedTattooIshmael] every time this unit consumes 5 [ResentmentIshmael] (2 times per turn)\n\nCombat Start: If this unit does not have [HeatingWireIshmael], and at 3+ Envy Reson., gain 2 [HeatingWireIshmael] next turn\nCombat Start: If this unit has [HeatingWireIshmael], gain (Envy Reson. / 3) [HeatingWireIshmael] at Turn End (max 2)"
+    },
+    {
+      "id": 1081402,
+      "name": "Thermal Weapon",
+      "desc": "This unit is considered as an Identity that inflicts [Combustion] and [Laceration].\nIf this unit has [HeatingWireIshmael], Skills that inflict [Laceration] are considered as Skills that inflict both [Combustion] and [Laceration]."
+    },
+    {
+      "id": 1081421,
+      "name": "Hey, Are Ya Into Fixers, Too?",
+      "desc": "Clash Power +1 for #1 Deployed Identity's Base Attack Skills (once per turn)\nIf the Dashboard has Envy A-Reson., #1 Deployed Identity deals +10% damage with Base Skills",
+      "summary": "Clash Power +1 for Base Attack Skills\nIf the Dashboard has Envy A-Reson., deal +10% damage with Base Skills"
+    },
+    {
+      "id": 1121402,
+      "name": "Dazzling Lamp",
+      "desc": "Turn Start: Gain 1 [LanternGregBigBird]\n\nExternal effects cannot change this unit's Min. and Max. Speeds\n\nWhen chaining Skills, this unit can redirect the Attack Skills' targeting to itself regardless of Speed (Focused Encounters only)\n\nWhen gaining [Agility], gain 1 [ParryingResultUp] instead (once per turn)\n- Once the above effect activates, cannot gain [Agility] for the rest of the turn"
+    },
+    {
+      "id": 1121403,
+      "name": "E.G.O Gear Proficiency Manual",
+      "desc": "Turn Start: Gain 1 [DefenseUp] for every ally wearing E.G.O Gears (max 3)\n\nWhen an ally dies, gain 2 [PenetrateDamageUp] next turn (once per turn)"
+    },
+    {
+      "id": 1121401,
+      "name": "Eyes Bright Like Lamps",
+      "desc": "Combat Start: Gain 1 [LanternGregBigBird]\n\nCombat Start: If an enemy has [DelusionGregBigBird], heal 3 SP\n\nTurn End: Apply [ObedienceGregBigBird] next turn to the ally with the earliest Deployment order among those that do not fit the following conditions:\n- Is this unit\n- Is an ally with [ObedienceGregBigBird]\n- Is an ally that cannot heal SP due to conditions such as Panic or Corrosion"
+    },
+    {
+      "id": 1121411,
+      "name": "Eyes Bright Like Lamps",
+      "desc": "Combat Start: Gain 1 [LanternGregBigBird] <style=\"highlight\">for every 2 Gloom Reson. (max 3)</style>\n\nCombat Start: If an enemy has [DelusionGregBigBird], heal <style=\"highlight\">5</style> SP\n\nTurn End: Apply [ObedienceGregBigBird] next turn to the ally with the earliest Deployment order among those that do not fit the following conditions:\n- Is this unit\n- Is an ally with [ObedienceGregBigBird]\n- Is an ally that cannot heal SP due to conditions such as Panic or Corrosion"
+    },
+    {
+      "id": 1121421,
+      "name": "Were There More Lives to be Saved?",
+      "desc": "Turn End: Apply the following to the ally with the earliest Deployment order among those with negative effects\n- Gain +4 [Aggro] to the leftmost Slot next turn\n- Gain 1 [HitDamageUp] next turn"
+    },
+    {
+      "id": 1101501,
+      "name": "The Orthodox Blade [整劍]",
+      "desc": "Combat Start: Gain ((Pride Reson. / 2) + 1) [Breath] (max 4, rounded down)\n\nCombat End: At 20+ [Breath], gain +1 [Breath] Count"
+    },
+    {
+      "id": 1101502,
+      "name": "Singular Focus of the Mind",
+      "desc": "Turn End: Any excess [Breath] Potency gained past 25 will be converted to [LittleFingerID] (max 15)\n\nCombat Start: If this unit did not equip Attack Skills (including E.G.O Skills) this turn, heal 5 SP and gain 1 [SlashResultUp] next turn"
+    },
+    {
+      "id": 1101521,
+      "name": "Tranquility [靜念]",
+      "desc": "The ally with the fastest Speed heals 5 SP and gains 5 Shield when starting combat with a Defense Skill equipped"
+    },
+    {
+      "id": 1011502,
+      "name": "Prescript Delivered on a Device",
+      "desc": "Turn Start:\n- Gain [IndexPrescriptYi_0] / [IndexPrescriptYi_1] / [IndexPrescriptYi_2] / [IndexPrescriptYi_3] based on [UnlockBuff_Base] stage on self\n- Inflict [IndexPrescriptTargetToEnemy] to a random enemy (in Focused Encounters, a Part)\n- Apply [IndexPrescriptTargetMarkToEnemy] to Base Attack Skills on this unit's Dashboard (1 per Slot, max 2 Skills)\n· At [UnlockBuffAlly_2]+, the effect above prioritizes Skill 3 (prioritizes empowered Skill)\n- All of the effects above and [IndexPrescript_Base_2nd] execution checks do not trigger when this unit is Staggered, Immobilized[TabExplain], in Panic, or in E.G.O Corrosion[TabExplain]",
+      "summary": "Upon executing Prescript, heal SP and gain Grace of the Prescript\nUpon failing Prescript, gain Karmic Consequence"
+    },
+    {
+      "id": 1011503,
+      "name": "The Oracle's Proxy / Unlock",
+      "desc": "Turn End: If [IndexPrescript_Base_2nd] was executed this turn at below [UnlockBuffAlly_2], heal 4 SP and gain 1 [BlessingOfIndexPrescriptAlly] (once per turn)\n- When executing [IndexPrescript_Base_2nd], if the main target has [IndexPrescriptTargetToEnemy], heal 8 SP and gain 3 [BlessingOfIndexPrescriptAlly] instead\n\nTurn End: If this unit is at [UnlockBuffAlly_2] and [IndexPrescriptYi_2] was executed this turn, heal 4 SP (once per turn)\n- When executing [IndexPrescript_Base_2nd], if [StackYisangSpecialSkill] has reached 9 Stacks, heal 8 SP and gain 3 [BlessingOfIndexPrescriptAlly]\n\nTurn End: If [IndexPrescript_Base_2nd] was not executed this turn, gain 5 [KarmaOfIndexAlly]\n- At [UnlockBuffAlly_3], does not gain [KarmaOfIndexAlly]\n- If this unit attempted to execute [IndexPrescript_Base_2nd] at Combat Start, but could not target the enemy during the combat phase, does not gain [KarmaOfIndexAlly] at Turn End (applies at below [UnlockBuffAlly_2])\n\nTurn End: At 3/6/9 [BlessingOfIndexPrescriptAlly], gain [UnlockBuffAlly_1]/[UnlockBuffAlly_2]/[UnlockBuffAlly_3]\nTurn Start: At [UnlockBuffAlly_3], gain [Shin_IndexFingerYisang]",
+      "summary": ""
+    },
+    {
+      "id": 1011504,
+      "name": "The Index Nursefather",
+      "desc": "Upon entering the Encounter for the first time, gain [BurningWoundYisangMask]\n- Turn End: If this unit was Staggered for the first time in this Encounter while under this effect, recover from Stagger (excluding forced Stagger) and convert [BurningWoundYisangMask] to [BurningWoundYisang]\n\nApply [SatisfyingEsteemNeeds] to The Index Proxy - Effloresced E.G.O::Procuration Don Quixote when both units are on the field",
+      "summary": ""
+    },
+    {
+      "id": 1011505,
+      "name": "Oracle Device [Caduceus]",
+      "desc": "A random weapon is assigned to every Coin for Base Attack Skills. Each weapon has a unique effect.\n- [YisangWeapon01Hatchet]\n- [YisangWeapon02Stiletto]\n- [YisangWeapon03Greatsword]\n- [YisangWeapon04Rapier]\n- [YisangWeapon05Sledgehammer]\n- [YisangWeapon06Ultragreatsword]\n- [YisangWeapon07Lance]\n- [YisangWeapon08Chain]\n- [YisangWeapon09Scythe]\n\nGain 1 [StackYisangSpecialSkill] when using Skills with [IndexPrescriptTargetMarkToEnemy]",
+      "summary": "A random weapon is assigned\nGain special effect when using 'Furioso-Replica'"
+    },
+    {
+      "id": 1011506,
+      "name": "Oracle Device [Caduceus]",
+      "desc": "A random weapon is assigned to every Coin for Base Attack Skills. Each weapon has a unique effect.\n- [YisangWeapon01Hatchet]\n- [YisangWeapon02Stiletto]\n- [YisangWeapon03Greatsword]\n- [YisangWeapon04Rapier]\n- [YisangWeapon05Sledgehammer]\n- [YisangWeapon06Ultragreatsword]\n- [YisangWeapon07Lance]\n- [YisangWeapon08Chain]\n- [YisangWeapon09Scythe]\n\nGain 1 [StackYisangSpecialSkill] when using Skills with [IndexPrescriptTargetMarkToEnemy]\n\n<style=\"highlight\">Convert [BurningWoundYisangMask] to [BurningWoundYisang] at the end of the turn this unit used 'Furioso-Replica' for the first time in this Encounter\n\nTurn Start: If this unit has [BurningWoundYisang] and has 'Furioso-Replica' on the Dashboard, gain [BlackNightmareYisang]</style>",
+      "summary": "A random weapon is assigned\nGain special effect when using 'Furioso-Replica'"
+    },
+    {
+      "id": 1011501,
+      "name": "Imitation of a Life",
+      "desc": "Deal +2% damage with Skills marked with [IndexPrescriptTargetMarkToEnemy] for every [BlessingOfIndexPrescriptAlly] on self (max 16%)\n- At 9 [BlessingOfIndexPrescriptAlly], deal +20% damage with Base Skills instead\n\nOn Hit with Base Attack Skill's [SuperCoin]s, gain 1 [StackYisangSpecialSkill]\n- Attack End: Gain [StackYisangSpecialSkill] equal to (# of remaining [SuperCoin]s)",
+      "summary": "Deal more damage with Skills marked with Mark of the Prescript based on Grace of the Prescript on self\nOn Hit: Heal SP\nGain [StackYisangSpecialSkill] when certain conditions are met"
+    },
+    {
+      "id": 1011511,
+      "name": "Imitation of a Life",
+      "desc": "Deal +2% damage with Skills marked with [IndexPrescriptTargetMarkToEnemy] for every [BlessingOfIndexPrescriptAlly] on self (max 16%)\n- At 9 [BlessingOfIndexPrescriptAlly], deal +20% damage with Base Skills instead\n\nOn Hit with Base Attack Skill's [SuperCoin]s, gain 1 [StackYisangSpecialSkill]\n- Attack End: Gain [StackYisangSpecialSkill] equal to (# of remaining [SuperCoin]s)\n<style=\"highlight\">- 'Furioso-Replica' Attack End: Gain [StackYisangSpecialSkill] next turn equal to (# of this Skill's remaining [SuperCoin]s / 2) (rounded down)</style>\n\n<style=\"highlight\">If [StackYisangSpecialSkill] reached 9 Stacks this turn at Turn End, and if this unit does not have a Skill 3 on the Dashboard at the start of the next turn, convert a Base Skill to Skill 3 (prioritizes the Skill on the leftmost Slot's bottom row)</style>",
+      "summary": "Deal more damage with Skills marked with Mark of the Prescript based on Grace of the Prescript on self\nOn Hit: Heal SP\nGain [StackYisangSpecialSkill] when certain conditions are met"
+    },
+    {
+      "id": 1011521,
+      "name": "Grace of God",
+      "desc": "Deal +5% damage with Slash, Pierce, and Blunt Base Attack Skills that are used for the first time by any ally each turn (once per type across all allies)\n- The Index Identities deal +10% damage instead\n- This effect's application is determined Before Attack",
+      "summary": "Deal more damage with Slash, Pierce, and Blunt Skills used for the first time this turn"
     }
   ]
 }

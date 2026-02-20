@@ -1126,6 +1126,55 @@
       "name": "Rodion",
       "nameWithTitle": "Rodion",
       "desc": "Rodion's 14th Identity"
+    },
+    {
+      "id": 11114,
+      "title": "LCA Udjat Vanguard\nTeam 3 Leader",
+      "name": "Outis",
+      "nameWithTitle": "Outis",
+      "desc": "Outis’s 14th Identity"
+    },
+    {
+      "id": 10214,
+      "title": "The Index Proselyte:\n【Paper Slip】",
+      "name": "Faust",
+      "nameWithTitle": "Faust",
+      "desc": "Faust's 14th Identity"
+    },
+    {
+      "id": 10314,
+      "title": "The Index Proxy - \nEffloresced E.G.O::\nProcuration",
+      "name": "Don Quixote",
+      "nameWithTitle": "Don Quixote",
+      "desc": "Don Quixote's 14th Identity"
+    },
+    {
+      "id": 10814,
+      "title": "The House of Spiders:\nThe Middle Apprentice",
+      "name": "Ishmael",
+      "nameWithTitle": "이스마엘",
+      "desc": "Ishmael's 14th Identity"
+    },
+    {
+      "id": 11015,
+      "title": "The House of Spiders:\nThe Pinky Apprentice",
+      "name": "Sinclair",
+      "nameWithTitle": "Sinclair",
+      "desc": "Sinclair’s 15th Identity"
+    },
+    {
+      "id": 11214,
+      "title": "Lobotomy E.G.O::Lamp",
+      "name": "Gregor",
+      "nameWithTitle": "Gregor",
+      "desc": "Gregor’s 14th Identity"
+    },
+    {
+      "id": 10115,
+      "title": "The House of Spiders:\nThe Index Nursefather",
+      "name": "Yi Sang",
+      "nameWithTitle": "Yi Sang",
+      "desc": "Yi Sang's 15th Identity"
     }
   ]
 }

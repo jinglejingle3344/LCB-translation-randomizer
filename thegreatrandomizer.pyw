@@ -22,6 +22,7 @@ if not (platform in ('linux', 'win32')):
 randomizeNames = tk.IntVar(wtf,value=1)
 namis = ('teller', 'title','name')
 dementia = tk.IntVar(wtf,value=0)
+delv = tk.IntVar(wtf,value=0)
 
 randombsgo = ( # list of fields that can be just about any string value; used to grab all possible values and to 
 #figure out which ones to scramble
@@ -96,7 +97,7 @@ def harvestValues(obj): #crawl object for matching keys (fields), put into vals
 def pickVal(original, i): #the value picker
     n = randint(0, len(vals)-1)
     v = vals[n]
-    del vals[n]
+    if delv.get(): del vals[n]
     if not randomizeNames.get() and i in namis: v = original
     if dementia.get() and i in namis: v = obfuscate(v)
     return v
@@ -233,5 +234,6 @@ tk.Button(wtf, text='Update Lang configs (to not have to select the doohickey)',
 tk.Button(wtf, background="green", text='Dude i dont fucking care (complete every step at once; use this if you dont plan on messing with the above)', command=alloem).grid()
 tk.Checkbutton(wtf, text='Dementia', variable=dementia).grid()
 tk.Checkbutton(wtf, text='Randomize Names', variable=randomizeNames).grid()
+tk.Checkbutton(wtf, text='Delete harvested values after use (being placed into a random field)', variable=delv).grid()
 
 window.mainloop()
