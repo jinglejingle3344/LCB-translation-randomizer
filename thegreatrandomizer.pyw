@@ -117,7 +117,7 @@ def scrambleValues(obj): #crawl object for matching keys (fields), grab and remo
         elif isstr:
             recurse = list(map(int, topick.get().split('~')))
             if len(recurse)>1:
-                recurse = randint(recurse[0], recurse[1])
+                recurse = randint(recurse[0], recurse[1]+1)
             else:
                 recurse = recurse[0]
             bouttaadd = pickVal(v,i,recurse-1)
