@@ -10,6 +10,7 @@ Simple python script with a GUI to randomize Limbus Company's localization
 2. download as zip
 3. unpack
 4. Enjoy!
+5. optionally remove the files, they arent needed since it just creates a new localization folder
 
 # Usage
 
