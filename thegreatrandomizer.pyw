@@ -22,7 +22,8 @@ if not (platform in ('linux', 'win32')):
 randomizeNames = tk.IntVar(wtf,value=1)
 namis = ('teller', 'title','name')
 dementia = tk.IntVar(wtf,value=0)
-delv = tk.IntVar(wtf,value=0)
+topick = tk.StringVar(wtf,value='1')
+delv = tk.IntVar(wtf,value=1)
 
 randombsgo = ( # list of fields that can be just about any string value; used to grab all possible values and to 
 #figure out which ones to scramble
@@ -94,12 +95,13 @@ def harvestValues(obj): #crawl object for matching keys (fields), put into vals
             else:
                 vals.append(g)
 
-def pickVal(original, i): #the value picker
+def pickVal(original, i, recurse=0): #the value picker
     n = randint(0, len(vals)-1)
     v = vals[n]
-    if delv.get(): del vals[n]
+    if delv.get() and recurse==0: del vals[n]
     if not randomizeNames.get() and i in namis: v = original
     if dementia.get() and i in namis: v = obfuscate(v)
+    if recurse>0: v += ' '+pickVal(original,i,recurse-1)
     return v
 
 def scrambleValues(obj): #crawl object for matching keys (fields), grab and remove valid values from vals, 
@@ -113,11 +115,17 @@ def scrambleValues(obj): #crawl object for matching keys (fields), grab and remo
         if isinstance(v, Iterable) and not isstr:
             obj[i] = scrambleValues(v)
         elif isstr:
+            recurse = list(map(int, topick.get().split('~')))
+            if len(recurse)>1:
+                recurse = randint(recurse[0], recurse[1])
+            else:
+                recurse = recurse[0]
+            bouttaadd = pickVal(v,i,recurse-1)
             if type(obj) is dict:
                 if i in randombsgo:
-                    obj[i] = pickVal(v,i)
+                    obj[i] = bouttaadd
             else:
-                obj[i] = pickVal(v,i)
+                obj[i] = bouttaadd
     return obj
 
 def crawlFS(root, mode = 'r'): #crawl the filesystem for all text files to absolutely slaughter or to harvest their values
@@ -157,6 +165,7 @@ def crawlFS(root, mode = 'r'): #crawl the filesystem for all text files to absol
 folds = ['','', '']
 foldErr = 'you need to select folders'
 langErr = 'you need to generate a new language'
+topickError = 'is the text box empty? does it have a whole number in it? is it larger than 0?'
 valErr = 'you need to grab values'
 normalStatus = 'This tool may take a while to finish. Read the title bars of the file selector windows!'
 
@@ -165,7 +174,19 @@ infl1 = tk.Label(wtf, text='Selected localization files: None'); infl1.grid()
 infl2 = tk.Label(wtf, text='Selected destination: None'); infl2.grid()
 infl3 = tk.Label(wtf, text='Working with language folder: None'); infl3.grid()
 
+def checktopick():
+    txt1: str = topick.get().split('~')
+    f = True
+    for n in txt1:
+        if not n.isdigit() or n == '0':
+            f = False
+            break
+    return f
+
 def selectfolds():
+    if not checktopick():
+        tm.showerror('Error', topickError) 
+        return
     folds[0] = td.askdirectory(title='Go into the original localization files')
     crawlFS(Path(folds[0]), 'c')
     infl1['text'] = 'Selected localization files: '+str(folds[0])
@@ -173,6 +194,9 @@ def selectfolds():
     infl2['text'] = 'Selected destination: '+str(folds[1])
 
 def copp():
+    if not checktopick():
+        tm.showerror('Error', topickError) 
+        return
     if (folds[0] in ('', None, ())) or (folds[1] in ('', None, ())): 
         tm.showerror('Error', foldErr) 
         return
@@ -183,6 +207,9 @@ def copp():
     if not Path(folds[2]+'/Font').exists(): copytree('./Font', folds[2]+'/Font')
     
 def grabvals():
+    if not checktopick():
+        tm.showerror('Error', topickError) 
+        return
     if (folds[0] in ('', None, ())) or (folds[1] in ('', None, ())): 
         tm.showerror('Error', foldErr) 
         return
@@ -190,6 +217,9 @@ def grabvals():
     crawlFS(Path(folds[0]))
 
 def scramble():
+    if not checktopick():
+        tm.showerror('Error', topickError) 
+        return
     if (folds[2] in ('', None, ())): 
         tm.showerror('Error', langErr) 
         return
@@ -202,6 +232,9 @@ def scramble():
     status['text'] = normalStatus
 
 def updconf():
+    if not checktopick():
+        tm.showerror('Error', topickError) 
+        return
     if (folds[0] in ('', None, ())) or (folds[1] in ('', None, ())): 
         tm.showerror('Error', foldErr) 
         return
@@ -220,20 +253,25 @@ def updconf():
     f.close()
 
 def alloem():
+    if not checktopick():
+        tm.showerror('Error', topickError) 
+        return
     selectfolds()
     copp()
     grabvals()
     scramble()
     updconf()
 
-tk.Button(wtf, text='Select folders (make sure the path ends with /Lang or whatever is the name of the source dir)', command=selectfolds).grid()
-tk.Button(wtf, text='Make a copy of original, drop it at Lang with random name, add font folder (if needed; required to work)', command=copp, height=1).grid()
+tk.Button(wtf, text='Select folders (make sure the path ends with /Lang for the second selector)', command=selectfolds).grid()
+tk.Button(wtf, text='Make a copy of original, drop it at Lang with random name, add font folder (if needed; required to scramble)', command=copp, height=1).grid()
 tk.Button(wtf, text='Grab all possible values from input folder', command=grabvals).grid()
 tk.Button(wtf, text='Scramble values in working dir using values from ^', command=scramble).grid()
 tk.Button(wtf, text='Update Lang configs (to not have to select the doohickey)', command=updconf).grid()
 tk.Button(wtf, background="green", text='Dude i dont fucking care (complete every step at once; use this if you dont plan on messing with the above)', command=alloem).grid()
 tk.Checkbutton(wtf, text='Dementia', variable=dementia).grid()
 tk.Checkbutton(wtf, text='Randomize Names', variable=randomizeNames).grid()
-tk.Checkbutton(wtf, text='Delete harvested values after use (being placed into a random field)', variable=delv).grid()
+tk.Checkbutton(wtf, text='Delete harvested values after use (being placed into a random field)\nprobably set this to false if the input box below has a number > 1, or a range of numbers', variable=delv).grid()
+tk.Label(wtf, text='How many times to add a random string to the field?\nSeparate 2 numbers with ~ to make it random (like 2~5)').grid()
+tk.Entry(wtf, textvariable=topick).grid()
 
 window.mainloop()
