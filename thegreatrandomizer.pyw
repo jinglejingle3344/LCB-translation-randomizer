@@ -22,6 +22,7 @@ if not (platform in ('linux', 'win32')):
 randomizeNames = tk.IntVar(wtf,value=1)
 namis = ('teller', 'title','name')
 dementia = tk.IntVar(wtf,value=0)
+trySimilarSize = tk.IntVar(wtf,value=0)
 topick = tk.StringVar(wtf,value='1')
 delv = tk.IntVar(wtf,value=1)
 
@@ -98,6 +99,12 @@ def harvestValues(obj): #crawl object for matching keys (fields), put into vals
 def pickVal(original, i, recurse=0): #the value picker
     n = randint(0, len(vals)-1)
     v = vals[n]
+    retries = 0
+    origlen = len(original)
+    while not (int(origlen*0.75) < len(v) < int(origlen*1.25)) and retries <= 24:
+        n = randint(0, len(vals)-1)
+        v = vals[n]
+        retries+=1
     if delv.get() and recurse==0: del vals[n]
     if not randomizeNames.get() and i in namis: v = original
     if dementia.get() and i in namis: v = obfuscate(v)
@@ -273,5 +280,6 @@ tk.Checkbutton(wtf, text='Randomize Names', variable=randomizeNames).grid()
 tk.Checkbutton(wtf, text='Delete harvested values after use (being placed into a random field)\nDO set this to false if the input box below has a number > 1, or a range of numbers', variable=delv).grid()
 tk.Label(wtf, text='How many times to add a random string to the field?\nSeparate 2 numbers with ~ to make it random (like 2~5)').grid()
 tk.Entry(wtf, textvariable=topick).grid()
+tk.Checkbutton(wtf, text='try to pick values of similar length to original. makes the process take longer since it rerolls 25 times', variable=trySimilarSize).grid()
 
 window.mainloop()
