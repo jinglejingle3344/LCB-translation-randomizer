@@ -25,7 +25,6 @@ dementia = tk.IntVar(wtf,value=0)
 trySimilarSize = tk.IntVar(wtf,value=0)
 topick = tk.StringVar(wtf,value='1')
 delv = tk.IntVar(wtf,value=1)
-exclusionsForMultiples = tk.IntVar(wtf,value=0)
 
 randombsgo = ( # list of fields that can be just about any string value; used to grab all possible values and to 
 #figure out which ones to scramble
@@ -97,33 +96,21 @@ def harvestValues(obj): #crawl object for matching keys (fields), put into vals
             else:
                 vals.append(g)
 
-def pickVal(original, i, recurse=0, recursedata: dict = {}): #the value picker
-    recurse-=1
+def pickVal(original, i, recurse=1): #the value picker
     vlen = len(vals)
     n = randint(0, vlen-1)
     v = vals[n]
     retries = 0
     origlen = len(original)
-    if recurse > 0 or len(recursedata) > 0:
-        if not 'origrecurse' in recursedata.keys():
-            recursedata['origrecurse'] = recurse
-        if not 'origlen' in recursedata.keys():
-            origlen = origlen//max(recurse,1)
-            recursedata['origlen'] = origlen
-        else:
-            origlen = recursedata['origlen']
-
-    while not (int(origlen*0.75) < len(v) < int(origlen*1.25)) and trySimilarSize.get() and retries <= min(450, vlen):
+    while not (int(origlen*0.75) < len(v) < int(origlen*1.25)) and trySimilarSize.get() and retries <= min(1000, vlen):
         n = randint(0, vlen-1)
         v = vals[n]
         retries+=1
-    if delv.get() and recurse==0: del vals[n]
+    if delv.get() and recurse<=1: del vals[n]
     if not randomizeNames.get() and i in namis: v = original
     if dementia.get() and i in namis: v = obfuscate(v)
-    if recurse>0:
-        gotten = pickVal(original,i,recurse-1, recursedata)
-        while v == gotten and vlen > 2 and exclusionsForMultiples.get():
-            gotten = pickVal(original,i,recurse-1, recursedata)
+    if recurse>1:
+        gotten = pickVal(original,i,recurse-1)
         v += ' ' + gotten
     return v
 
@@ -143,7 +130,7 @@ def scrambleValues(obj): #crawl object for matching keys (fields), grab and remo
                 recurse = randint(recurse[0], recurse[1]+1)
             else:
                 recurse = recurse[0]
-            bouttaadd = pickVal(v,i,recurse-1)
+            bouttaadd = pickVal(v,i,recurse)
             if type(obj) is dict:
                 if i in randombsgo:
                     obj[i] = bouttaadd
@@ -294,10 +281,9 @@ tk.Button(wtf, text='Update Lang configs (to not have to select the doohickey)',
 tk.Button(wtf, background="green", text='Dude i dont fucking care (complete every step at once; use this if you dont plan on messing with the above and below)', command=alloem).grid()
 tk.Checkbutton(wtf, text='Dementia', variable=dementia).grid()
 tk.Checkbutton(wtf, text='Randomize Names', variable=randomizeNames).grid()
-tk.Checkbutton(wtf, text='Delete harvested values after use (being placed into a random field)\nDO set this to false if the input box below has a number > 1, or a range of numbers', variable=delv).grid()
+tk.Checkbutton(wtf, text='Delete harvested values from memory after use (being placed into a random field).\nOnly triggers on the final random string (relevant if u bother with the thing below).\nSet to false if you use a smaller input locale than your output locale.', variable=delv).grid()
 tk.Label(wtf, text='How many times to add a random string to the field?\nSeparate 2 numbers with ~ to make it random (like 2~5)').grid()
 tk.Entry(wtf, textvariable=topick).grid()
-tk.Checkbutton(wtf, text='exclusions for ^', variable=exclusionsForMultiples).grid()
 tk.Checkbutton(wtf, text='try to pick values of similar length to original. makes the process take longer since it rerolls up to 200 or so times', variable=trySimilarSize).grid()
 
 window.mainloop()
