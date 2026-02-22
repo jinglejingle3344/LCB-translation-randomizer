@@ -25,6 +25,7 @@ dementia = tk.IntVar(wtf,value=0)
 trySimilarSize = tk.IntVar(wtf,value=0)
 topick = tk.StringVar(wtf,value='1')
 delv = tk.IntVar(wtf,value=1)
+exclusionsForMultiples = tk.IntVar(wtf,value=0)
 
 randombsgo = ( # list of fields that can be just about any string value; used to grab all possible values and to 
 #figure out which ones to scramble
@@ -121,7 +122,7 @@ def pickVal(original, i, recurse=0, recursedata: dict = {}): #the value picker
     if dementia.get() and i in namis: v = obfuscate(v)
     if recurse>0:
         gotten = pickVal(original,i,recurse-1, recursedata)
-        while v == gotten and vlen > 2:
+        while v == gotten and vlen > 2 and exclusionsForMultiples.get():
             gotten = pickVal(original,i,recurse-1, recursedata)
         v += ' ' + gotten
     return v
@@ -296,6 +297,7 @@ tk.Checkbutton(wtf, text='Randomize Names', variable=randomizeNames).grid()
 tk.Checkbutton(wtf, text='Delete harvested values after use (being placed into a random field)\nDO set this to false if the input box below has a number > 1, or a range of numbers', variable=delv).grid()
 tk.Label(wtf, text='How many times to add a random string to the field?\nSeparate 2 numbers with ~ to make it random (like 2~5)').grid()
 tk.Entry(wtf, textvariable=topick).grid()
+tk.Checkbutton(wtf, text='exclusions for ^', variable=exclusionsForMultiples).grid()
 tk.Checkbutton(wtf, text='try to pick values of similar length to original. makes the process take longer since it rerolls up to 200 or so times', variable=trySimilarSize).grid()
 
 window.mainloop()
