@@ -96,19 +96,35 @@ def harvestValues(obj): #crawl object for matching keys (fields), put into vals
             else:
                 vals.append(g)
 
-def pickVal(original, i, recurse=0): #the value picker
-    n = randint(0, len(vals)-1)
+def pickVal(original, i, recurse=0, recursedata: dict = {}): #the value picker
+    recurse-=1
+    vlen = len(vals)
+    n = randint(0, vlen-1)
     v = vals[n]
     retries = 0
+    orreclessvlen = 0
     origlen = len(original)
-    while not (int(origlen*0.75) < len(v) < int(origlen*1.25)) and retries <= 24:
-        n = randint(0, len(vals)-1)
+    if recurse > 0:
+        if not 'origrecurse' in recursedata.keys():
+            recursedata['origrecurse'] = recurse
+        if not 'origlen' in recursedata.keys():
+            origlen = origlen//max(recurse,1)
+            recursedata['origlen'] = origlen
+        else:
+            origlen = recursedata['origlen']
+        orreclessvlen = recursedata['origrecurse']*10 < vlen
+        if not 'exclusions' in recursedata.keys() and orreclessvlen:
+            recursedata['exclusions'] = [v]
+        elif 'exclusions' in recursedata.keys() and orreclessvlen:
+            recursedata['exclusions'] += [v]
+    while not (int(origlen*0.75) < len(v) < int(origlen*1.25)) and trySimilarSize.get() and retries <= min(200, vlen) or (orreclessvlen and v in recursedata['exclusions']):
+        n = randint(0, vlen-1)
         v = vals[n]
         retries+=1
     if delv.get() and recurse==0: del vals[n]
     if not randomizeNames.get() and i in namis: v = original
     if dementia.get() and i in namis: v = obfuscate(v)
-    if recurse>0: v += ' '+pickVal(original,i,recurse-1)
+    if recurse>0: v += ' '+pickVal(original,i,recurse-1, recursedata)
     return v
 
 def scrambleValues(obj): #crawl object for matching keys (fields), grab and remove valid values from vals, 
@@ -268,18 +284,19 @@ def alloem():
     grabvals()
     scramble()
     updconf()
+    print(":D")
 
 tk.Button(wtf, text='Select folders (make sure the path ends with /Lang for the second selector)', command=selectfolds).grid()
 tk.Button(wtf, text='Make a copy of original, drop it at Lang with random name, add font folder (if needed; required to scramble)', command=copp, height=1).grid()
 tk.Button(wtf, text='Grab all possible values from input folder', command=grabvals).grid()
 tk.Button(wtf, text='Scramble values in working dir using values from ^', command=scramble).grid()
 tk.Button(wtf, text='Update Lang configs (to not have to select the doohickey)', command=updconf).grid()
-tk.Button(wtf, background="green", text='Dude i dont fucking care (complete every step at once; use this if you dont plan on messing with the above)', command=alloem).grid()
+tk.Button(wtf, background="green", text='Dude i dont fucking care (complete every step at once; use this if you dont plan on messing with the above and below)', command=alloem).grid()
 tk.Checkbutton(wtf, text='Dementia', variable=dementia).grid()
 tk.Checkbutton(wtf, text='Randomize Names', variable=randomizeNames).grid()
 tk.Checkbutton(wtf, text='Delete harvested values after use (being placed into a random field)\nDO set this to false if the input box below has a number > 1, or a range of numbers', variable=delv).grid()
 tk.Label(wtf, text='How many times to add a random string to the field?\nSeparate 2 numbers with ~ to make it random (like 2~5)').grid()
 tk.Entry(wtf, textvariable=topick).grid()
-tk.Checkbutton(wtf, text='try to pick values of similar length to original. makes the process take longer since it rerolls 25 times', variable=trySimilarSize).grid()
+tk.Checkbutton(wtf, text='try to pick values of similar length to original. makes the process take longer since it rerolls up to 200 or so times', variable=trySimilarSize).grid()
 
 window.mainloop()
