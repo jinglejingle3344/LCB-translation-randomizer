@@ -281,7 +281,7 @@ tk.Button(wtf, text='Update Lang configs (to not have to select the doohickey)',
 tk.Button(wtf, background="green", text='Dude i dont fucking care (complete every step at once; use this if you dont plan on messing with the above and below)', command=alloem).grid()
 tk.Checkbutton(wtf, text='Dementia', variable=dementia).grid()
 tk.Checkbutton(wtf, text='Randomize Names', variable=randomizeNames).grid()
-tk.Checkbutton(wtf, text='Delete harvested values from memory after use (being placed into a random field).\nOnly triggers on the final random string (relevant if u bother with the thing below).\nSet to false if you use a smaller input locale than your output locale.', variable=delv).grid()
+tk.Checkbutton(wtf, text='Delete harvested values from memory after use (being placed into a random field).\nOnly triggers on the final random string (relevant if u bother with the thing below).\nSet to false if it randomly stops working one time.', variable=delv).grid()
 tk.Label(wtf, text='How many times to add a random string to the field?\nSeparate 2 numbers with ~ to make it random (like 2~5)').grid()
 tk.Entry(wtf, textvariable=topick).grid()
 tk.Checkbutton(wtf, text='try to pick values of similar length to original. makes the process take longer since it rerolls up to 200 or so times', variable=trySimilarSize).grid()
