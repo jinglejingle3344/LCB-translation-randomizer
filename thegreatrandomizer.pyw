@@ -102,9 +102,8 @@ def pickVal(original, i, recurse=0, recursedata: dict = {}): #the value picker
     n = randint(0, vlen-1)
     v = vals[n]
     retries = 0
-    orreclessvlen = 0
     origlen = len(original)
-    if recurse > 0:
+    if recurse > 0 or len(recursedata) > 0:
         if not 'origrecurse' in recursedata.keys():
             recursedata['origrecurse'] = recurse
         if not 'origlen' in recursedata.keys():
@@ -112,19 +111,19 @@ def pickVal(original, i, recurse=0, recursedata: dict = {}): #the value picker
             recursedata['origlen'] = origlen
         else:
             origlen = recursedata['origlen']
-        orreclessvlen = recursedata['origrecurse']*10 < vlen
-        if not 'exclusions' in recursedata.keys() and orreclessvlen:
-            recursedata['exclusions'] = [v]
-        elif 'exclusions' in recursedata.keys() and orreclessvlen:
-            recursedata['exclusions'] += [v]
-    while not (int(origlen*0.75) < len(v) < int(origlen*1.25)) and trySimilarSize.get() and retries <= min(200, vlen) or (orreclessvlen and v in recursedata['exclusions']):
+
+    while not (int(origlen*0.75) < len(v) < int(origlen*1.25)) and trySimilarSize.get() and retries <= min(450, vlen):
         n = randint(0, vlen-1)
         v = vals[n]
         retries+=1
     if delv.get() and recurse==0: del vals[n]
     if not randomizeNames.get() and i in namis: v = original
     if dementia.get() and i in namis: v = obfuscate(v)
-    if recurse>0: v += ' '+pickVal(original,i,recurse-1, recursedata)
+    if recurse>0:
+        gotten = pickVal(original,i,recurse-1, recursedata)
+        while v == gotten and vlen > 2:
+            gotten = pickVal(original,i,recurse-1, recursedata)
+        v += ' ' + gotten
     return v
 
 def scrambleValues(obj): #crawl object for matching keys (fields), grab and remove valid values from vals, 
