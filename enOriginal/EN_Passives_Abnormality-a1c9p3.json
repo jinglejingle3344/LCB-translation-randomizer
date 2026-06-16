@@ -45,7 +45,7 @@
     {
       "id": 133109,
       "name": "Please, Do Stop Running and Be Seated",
-      "desc": "Turn End: Inflict [RedemptionTheRings] to the Sinner and Assist Unit with the fastest Speed"
+      "desc": "Turn End: Inflict [RedemptionTheRings] next turn to the Sinner and Assist Unit with the fastest Speed"
     },
     {
       "id": 133201,
@@ -392,7 +392,7 @@
     {
       "id": 133802,
       "name": "Training to Inherit the Name of a Star",
-      "desc": "After Attack Skill End, deal (# of Slash Coins that hit Critically x 10) Slash damage against each target (cannot be Staggered due to this damage)"
+      "desc": "Attack Skill End: Deal (# of Slash Coins that hit Critically x 10) Slash damage against each target (cannot be Staggered due to this damage)"
     },
     {
       "id": 133803,
@@ -453,7 +453,7 @@
     {
       "id": 134702,
       "name": "Oracle Device [Caduceus]",
-      "desc": "<color=#ff6000><mark=#ff000040><b><u>A random weapon is assigned to every Coin. Each weapon has a unique effect.</u></b></mark></color>\n- [RienWeapon01Hatchet]\n- [RienWeapon02Stiletto]\n- [RienWeapon03Greatsword]\n- [RienWeapon04Rapier]\n- [RienWeapon05Sledgehammer]\n- [RienWeapon06Ultragreatsword]\n- [RienWeapon07Lance]\n- [RienWeapon08Chain]\n- [RienWeapon09Scythe]\n\nWhen using an Attack Skill, gain 1 [StackRienSpecialSkill] (max 9)\n- Can be gained once per Skill; does not gain Stack from the same Skill twice\n\n<color=#ff6000><mark=#ff000040><b><u>Turn Start: At 9 [StackRienSpecialSkill] Stacks, use a powerful Skill</u></b></mark></color>\n- After Attack using the powerful Skill for the first time, gain [Shin_Rien]\n- Reset the per-Skill [StackRienSpecialSkill] cap\n- Min & Max Speed +25\n- Turn End: Gain 1 [Vulnerable] and 2 [ResultReduction] next turn\n\nTurn 5 Start: At less than 9 [StackRienSpecialSkill], bring its Stack to 9; then, gain (Stack gained x 5) [KarmaOfIndexRien]\n- Then, activate this effect every 4 turns",
+      "desc": "<color=#ff6000><mark=#ff000040><b><u>A random weapon is assigned to every Coin. Each weapon has a unique effect.</u></b></mark></color>\n- [RienWeapon01Hatchet]\n- [RienWeapon02Stiletto]\n- [RienWeapon03Greatsword]\n- [RienWeapon04Rapier]\n- [RienWeapon05Sledgehammer]\n- [RienWeapon06Ultragreatsword]\n- [RienWeapon07Lance]\n- [RienWeapon08Chain]\n- [RienWeapon09Scythe]\n\nWhen using an Attack Skill, gain 1 [StackRienSpecialSkill] (max 9)\n- Can be gained once per Skill; does not gain Stack from the same Skill twice\n\n<color=#ff6000><mark=#ff000040><b><u>Turn Start: At 9 [StackRienSpecialSkill] Stacks, use a powerful Skill</u></b></mark></color>\n- Attack End: After using the powerful Skill for the first time, gain [Shin_Rien]\n- Reset the per-Skill [StackRienSpecialSkill] cap\n- Min & Max Speed +25\n- Turn End: Gain 1 [Vulnerable] and 2 [ResultReduction] next turn\n\nTurn 5 Start: At less than 9 [StackRienSpecialSkill], bring its Stack to 9; then, gain (Stack gained x 5) [KarmaOfIndexRien]\n- Then, activate this effect every 4 turns",
       "flavor": "A vial of what looks like liquid metal capable of changing its shape and mass, its qualities almost like those of Singularities, swishes inside the Device.\nThe form the fluid takes is contingent on the Prescript the Device receives. The weapons it produces depend on the information regarding the target and the time limit given to carry out the assassination.\nOne day, as he received a dagger too small for the task, he elected to wait until it produced a different weapon. However, despite the approaching deadline, it refused to provide him a proper weapon; he had no choice but to kill his target with a fork."
     },
     {
@@ -503,6 +503,61 @@
       "name": "The Final Battle",
       "desc": "In this Encounter, when this unit takes damage that brings their HP down to 0, nullify that damage and apply the following effects (once per Encounter):\n- Heal max HP and remove all removable negative effects from this unit\n- For this Encounter, gain 1 [Vulnerable] and fix [TimeEntangleUnstable] to 1. Take (# of current turn x 10) fixed damage at the end of every turn\n- Afterward, end turn and the attack pattern becomes empowered",
       "flavor": "\"You have been made to forget all, and I to remember all.\""
+    },
+    {
+      "id": 137801,
+      "name": "Observation",
+      "desc": "Encounter Start: Apply 1 [ObservedPerson] on all enemies; then, gain [Breath] Potency and Count equal to the number of units with [ObservedPerson]\n\nTurn Start: Apply 1 [ObservedPerson] against targets without [ObservedPerson]\n\nFor every 10 [ObservedPerson] on the target, inflict +1 more [Vibration] Potency and Count with this unit's Skills (max 3)"
+    },
+    {
+      "id": 137802,
+      "name": "Adaptation",
+      "desc": "Gain 1 [Breath] Potency every time this unit inflicts damage with Attack Skill effects (15 per turn)\n- If the target has 15+ [ObservedPerson], gain 1 additional [Breath] Potency with every hit\n\nGain +1 [Breath] Count every time this unit takes damage from a Sinner's Attack Skill effects (15 per turn)\n- If the target has 15+ [ObservedPerson], gain +1 additional [Breath] Count with every hit taken\n\n<color=#ff6000><mark=#ff000040><b><u>Turn Start: Inflict 3 [ResultReduction] and 5 [ObservedPerson] to the Sinner who dealt the most damage to this unit in the previous turn\n- If the target has 30 [ObservedPerson], inflict 5 [ResultReduction] instead</u></b></mark></color>"
+    },
+    {
+      "id": 137803,
+      "name": "Defense Mechanism",
+      "desc": "Turn Start: <color=#ff6000><mark=#ff000040><b><u>Gain Shield equal to 30% of missing HP (Shield HP cannot exceed 25% of the max HP)</u></b></mark></color>\n- If this unit has [Combustion], lose ([Combustion] Count x 1.5)% Shield HP\n- Shield takes +100% damage from [Burst] effects\n\nTurn End: If the Shield gained due to this effect is destroyed, for the rest of this Encounter, gain 1 [DefenseDown] at Turn Start for every instance the Shield has been destroyed (max 5)"
+    },
+    {
+      "id": 137804,
+      "name": "Confirmation Bias",
+      "desc": "Turn End: <color=#ff6000><mark=#ff000040><b><u>Siphon 10 SP from Sinners</u></b></mark></color> (max 3 Sinners in descending order of SP; does not apply cumulatively on the same target)\n(Does not activate if Hohenheim is Panicked)\n\n<color=#ff6000><mark=#ff000040><b><u>This unit's SP does not drop below 15</u></b></mark></color>"
+    },
+    {
+      "id": 137805,
+      "name": "Establish Hypothesis",
+      "desc": "On Turn 3: Gains a new pattern and prepares to use a powerful Skill.\nAfter Turn 3 is over: The above effect activates when this unit has 30+ [Breath] Count at Turn End\n\nIf this unit did not take any HP damage during the preparation period before using the powerful Skill, greatly enhance the Skill (does not count damages taken by Shield HP)"
+    },
+    {
+      "id": 137806,
+      "name": "Maladaptation",
+      "desc": "When weakened due to a Choice Event, this Passive replaces 「Adaptation」\n\nGain 1 [Breath] Potency every time this unit inflicts damage with Attack Skill effects (15 per turn)\n- If the target has 15+ [ObservedPerson], gain 1 additional [Breath] Potency with every hit; however, reduce the target's [ObservedPerson] by 3\n\nGain +1 [Breath] Count every time this unit takes damage from a Sinner's Attack Skill effects (15 per turn)\n- If the target has 15+ [ObservedPerson], gain +1 additional [Breath] Count with every hit taken; however, reduce the target's [ObservedPerson] by 3\n\nCritical damage does not increase or decrease"
+    },
+    {
+      "id": 137807,
+      "name": "Inadequate Defense Mechanism",
+      "desc": "When weakened due to a Choice Event, this Passive replaces 「Defense Mechanism」\n\nTurn Start: Gain Shield equal to 15% of missing HP (Shield HP cannot exceed 5% of the max HP)\n- If this unit has [Combustion], lose ([Combustion] Count x 2)% Shield HP\n- Shield takes +150% damage from [Burst] effects\n\nTurn End: If the Shield gained due to this effect is destroyed, for the rest of this Encounter, gain 2 [DefenseDown] at Turn Start for every instance the Shield has been destroyed (max 10)"
+    },
+    {
+      "id": 137808,
+      "name": "Self-doubt",
+      "desc": "When weakened due to a Choice Event, this Passive replaces 「Confirmation Bias」\n\nTurn Start: <color=#ff6000><mark=#ff000040><b><u>Gain 3 [Vulnerable]</u></b></mark></color> and lose 15 SP\nTurn End: Siphon 5 SP from targets with higher SP than this unit (max 3 targets; in descending order of SP; cannot stack on the same target)\n(Does not activate if Hohenheim is Panicked)"
+    },
+    {
+      "id": 137809,
+      "name": "Adaptation",
+      "desc": "Gain 1 [Breath] Potency every time this unit inflicts damage with Attack Skill effects (15 per turn)\n- If the target has 15+ [ObservedPerson], gain 1 additional [Breath] Potency with every hit\n\nGain +1 [Breath] Count every time this unit takes damage from a Sinner's Attack Skill effects (15 per turn)\n- If the target has 15+ [ObservedPerson], gain +1 additional [Breath] Count with every hit taken\n\n<color=#ff6000><mark=#ff000040><b><u>Turn Start: Inflict 3 [ResultReduction] and 5 [ObservedPerson] to the Sinner who dealt the most damage to this unit in the previous turn\n- If the target has 30 [ObservedPerson], inflict 5 [ResultReduction] instead</u></b></mark></color>"
+    },
+    {
+      "id": 137810,
+      "name": "Defense Mechanism",
+      "desc": "Turn Start: <color=#ff6000><mark=#ff000040><b><u>Gain Shield equal to 30% of missing HP (Shield HP cannot exceed 25% of the max HP)</u></b></mark></color>\n- If this unit has [Combustion], lose ([Combustion] Count x 1.5)% Shield HP\n- Shield takes +100% damage from [Burst] effects\n\nTurn End: If the Shield gained due to this effect is destroyed, for the rest of this Encounter, gain 1 [DefenseDown] at Turn Start for every instance the Shield has been destroyed (max 5)"
+    },
+    {
+      "id": 137811,
+      "name": "Maladaptation",
+      "desc": "When weakened due to a Choice Event, this Passive replaces 「Adaptation」\n\nGain 1 [Breath] Potency every time this unit inflicts damage with Attack Skill effects (15 per turn)\n- If the target has 15+ [ObservedPerson], gain 1 additional [Breath] Potency with every hit; however, reduce the target's [ObservedPerson] by 3\n\nGain +1 [Breath] Count every time this unit takes damage from a Sinner's Attack Skill effects (15 per turn)\n- If the target has 15+ [ObservedPerson], gain +1 additional [Breath] Count with every hit taken; however, reduce the target's [ObservedPerson] by 3\n\nCritical damage does not increase or decrease"
     }
   ]
 }

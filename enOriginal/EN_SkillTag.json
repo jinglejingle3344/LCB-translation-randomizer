@@ -74,7 +74,7 @@
     },
     {
       "id": "EndSkill",
-      "name": "[After Attack]"
+      "name": "[Attack End]"
     },
     {
       "id": "StartBattle",
@@ -210,7 +210,7 @@
     },
     {
       "id": "EndCoin",
-      "name": "[After Current Coin Attack]"
+      "name": "[Current Coin Attack End]"
     },
     {
       "id": "CriticalEnemyTargetKillFail",
@@ -267,6 +267,14 @@
     {
       "id": "BeforeBehavior",
       "name": "[Before Action]"
+    },
+    {
+      "id": "AlwaysUseEGOPassive2050911",
+      "name": "[Always Active - Blade Lineage Mentor Meursault Exclusive Effect]"
+    },
+    {
+      "id": "WhenUseEGOPassive",
+      "name": "[Effect on Use]"
     }
   ]
 }

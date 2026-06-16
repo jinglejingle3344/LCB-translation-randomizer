@@ -168,7 +168,7 @@
     {
       "id": 9756,
       "name": "Unhatched Embers",
-      "desc": "When taking mortal damage, fix HP to 1 for the attack; After Attack, heal 20% of max HP. (once per Encounter)",
+      "desc": "When taking mortal damage, fix HP to 1 for the attack; Attack End: Heal 20% of max HP. (once per Encounter)",
       "simpleDesc": [
         {
           "abilityID": 9756,
@@ -179,7 +179,7 @@
     {
       "id": 19756,
       "name": "Unhatched Embers+",
-      "desc": "When taking mortal damage, fix HP to 1 for the attack; After Attack, heal 20% of max HP. (once per Encounter)\n\n<style=\"upgradeHighlight\">If the affected unit has [Combustion]: fix HP to 1 for the attack; After Attack, heal 30% of max HP instead. (once per Encounter for both this and the above effect)</style>",
+      "desc": "When taking mortal damage, fix HP to 1 for the attack; Attack End: Heal 20% of max HP. (once per Encounter)\n\n<style=\"upgradeHighlight\">If the affected unit has [Combustion]: fix HP to 1 for the attack; Attack End: Heal 30% of max HP instead. (once per Encounter for both this and the above effect)</style>",
       "simpleDesc": [
         {
           "abilityID": 19756,
@@ -190,7 +190,7 @@
     {
       "id": 29756,
       "name": "Unhatched Embers++",
-      "desc": "When taking mortal damage, fix HP to 1 for the attack; After Attack, heal 20% of max HP. (once per Encounter)\n\nIf the affected unit has [Combustion]: fix HP to 1 for the attack; After Attack, heal <style=\"upgradeHighlight\">40</style>% of max HP instead. (once per Encounter for both this and the above effect)",
+      "desc": "When taking mortal damage, fix HP to 1 for the attack; Attack End: Heal 20% of max HP. (once per Encounter)\n\nIf the affected unit has [Combustion]: fix HP to 1 for the attack; Attack End: Heal <style=\"upgradeHighlight\">40</style>% of max HP instead. (once per Encounter for both this and the above effect)",
       "simpleDesc": [
         {
           "abilityID": 29756,
@@ -223,7 +223,7 @@
     {
       "id": 9758,
       "name": "Vestiges of the King",
-      "desc": "Chain Battles) Starting from #7 Deployed Sinner, at the start of the same turn it Substitutes in, heal 10 SP, gain 2 [ParryingResultUp], and gain 1 E.G.O resource for each one of their Skills 1, 2, and 3",
+      "desc": "Turn Start: If an Identity has Substituted in, the said Identity heals 10 SP and gains 2 [Enhancement], 2 [ParryingResultUp], and gains 1 E.G.O resource for each one of their Skills 1, 2, and 3",
       "simpleDesc": [
         {
           "abilityID": 9758,
@@ -525,7 +525,7 @@
     {
       "id": 9776,
       "name": "Embers",
-      "desc": "Turn Start: all enemies(for Abnormalities, all Parts) with 2~7 [Combustion] Count gain 1~2 [Combustion] Count.\n\nWhen enemies take 5 hits from ally Attack Skills(including E.G.O Skills) that inflict [Combustion] Potency, Count, or 'Unique Burn': trigger [Combustion] once, then reduce [Combustion] Count by 1 (2 times per turn per enemy; for Abnormalities, for each Part)",
+      "desc": "Turn Start: All enemies (for Abnormalities, all Parts) gain +1~2 [Combustion] Count\n\nWhen enemies take 5 hits from ally Attack Skills(including E.G.O Skills) that inflict [Combustion] Potency, Count, or 'Unique Burn': Trigger [Combustion] once, then reduce [Combustion] Count by 1 (2 times per turn per enemy; for Abnormalities, for each Part)",
       "simpleDesc": [
         {
           "abilityID": 9776,
@@ -534,10 +534,6 @@
         {
           "abilityID": 97761,
           "simpleDesc": "Activate [Combustion]"
-        },
-        {
-          "abilityID": 97762,
-          "simpleDesc": ""
         }
       ]
     },
@@ -823,7 +819,7 @@
     {
       "id": 9794,
       "name": "Swishing Fuel Tank",
-      "desc": "[Effects apply only to #2, #4 Deployed Identities]\n\nWhen taking lethal damage, 60% chance to not take that damage and heal 30 HP. (once per Encounter)\nThe above effect does not activate under the following conditions:\n- When the Skill damage taken exceeds the unit's max HP\n- When the unit has the HP Healing Down effect",
+      "desc": "[Effects apply only to #2, #4 Deployed Identities]\n\nWhen taking lethal damage, 60% chance to not take that damage and heal 30 HP. (once per Identity per Encounter)\nThe above effect does not activate under the following conditions:\n- When the Skill damage taken exceeds the unit's max HP\n- When the unit has the HP Healing Down effect",
       "simpleDesc": [
         {
           "abilityID": 9794,

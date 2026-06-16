@@ -67,6 +67,38 @@
     {
       "id": 17,
       "content": "Sinking"
+    },
+    {
+      "id": 18,
+      "content": "Sinking, Poise"
+    },
+    {
+      "id": 19,
+      "content": "Rupture"
+    },
+    {
+      "id": 20,
+      "content": "Charge, Rupture"
+    },
+    {
+      "id": 21,
+      "content": "Bleed, Charge"
+    },
+    {
+      "id": 22,
+      "content": "Bleed"
+    },
+    {
+      "id": 23,
+      "content": "Envy, Bleed"
+    },
+    {
+      "id": 24,
+      "content": "Bleed"
+    },
+    {
+      "id": 25,
+      "content": "Envy, Bleed"
     }
   ]
 }

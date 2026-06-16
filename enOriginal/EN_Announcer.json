@@ -46,7 +46,7 @@
     },
     {
       "id": 12,
-      "name": "Angela"
+      "name": "Angela\n<size=90%>(Lobotomy Corporation AI)</size>"
     },
     {
       "id": 13,
@@ -163,6 +163,34 @@
     {
       "id": 40,
       "name": "Lei Heng"
+    },
+    {
+      "id": 43,
+      "name": "Angela\n<size=90%>(Library Director - Early Days)</size>"
+    },
+    {
+      "id": 44,
+      "name": "Chesed"
+    },
+    {
+      "id": 45,
+      "name": "LCE Research Team"
+    },
+    {
+      "id": 46,
+      "name": "Kira"
+    },
+    {
+      "id": 47,
+      "name": "<District 8 Sweepers>"
+    },
+    {
+      "id": 48,
+      "name": "<District 8 Sweepers [Interpreted]>"
+    },
+    {
+      "id": 49,
+      "name": "Bamboo-hatted Kim\n& Aeng-Du"
     }
   ]
 }

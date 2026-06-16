@@ -66,7 +66,7 @@
     },
     {
       "id": "mirror_recovered_unit_status",
-      "content": "All allies have been fully healed, and defeated allies have been revived"
+      "content": "All allies have been fully healed, and defeated allies have been revived\n(excluding unrevivable allies)"
     },
     {
       "id": "mirror_start_buff_cannot_purchase_side_popup_title",
@@ -530,11 +530,11 @@
     },
     {
       "id": "mirrordungeon_purchase_achievement_block_by_max_level",
-      "content": "Exceeded purchasable Achievement Level"
+      "content": "Exceeded purchasable Pass Level"
     },
     {
       "id": "mirrordungeon_achievement_max_level",
-      "content": "Achievement Level maxed out"
+      "content": "Pass Level maxed out"
     },
     {
       "id": "lack_of_point_for_shop_without_new_line",

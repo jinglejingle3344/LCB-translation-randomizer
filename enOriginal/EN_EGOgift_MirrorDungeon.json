@@ -290,7 +290,7 @@
     {
       "id": 9012,
       "name": "Today’s Expression",
-      "desc": "After defeating an enemy by using a Sloth Affinity or Blunt Skill, raise the unit's Blunt Skill Power by 2 until the end of the next turn.",
+      "desc": "If an enemy is killed by Attack End of a Blunt Skill or a Sloth Skill: For 2 turns, starting next turn, raise the Blunt Skill Power by 2 for the unit who used the Skill",
       "simpleDesc": [
         {
           "abilityID": 9012,
@@ -510,7 +510,7 @@
     {
       "id": 9020,
       "name": "White Gossypium",
-      "desc": "Turn Start: If there are Staggered enemies, un-Stagger enemies. Then, inflict (8 + Stagger LV x 4) [Laceration] Potency and (8 + Stagger LV x4)/2 [AttackDown] on them. (Activates once per enemy per Encounter. Does not activate against certain enemies that do not recover from Stagger)",
+      "desc": "Turn Start: If there are Staggered enemies, un-Stagger enemies. Then, inflict (8 + Stagger LV x 4) [Laceration] Potency and (8 + Stagger LV x4)/2 [AttackDown] on them this turn and next turn. (Activates once per enemy per Encounter. Does not activate against certain enemies that do not recover from Stagger)",
       "simpleDesc": [
         {
           "abilityID": 9020,
@@ -521,7 +521,7 @@
     {
       "id": 19020,
       "name": "White Gossypium+",
-      "desc": "Turn Start: If there are Staggered enemies, un-Stagger enemies. Then, inflict <style=\"upgradeHighlight\">(10 + Stagger LV x 5) [Laceration] Potency</style> and <style=\"upgradeHighlight\">(10 + Stagger LV x 5)</style> [AttackDown]. (Activates once per enemy per Encounter. Does not activate against certain enemies that do not recover from Stagger)",
+      "desc": "Turn Start: If there are Staggered enemies, un-Stagger enemies. Then, inflict <style=\"upgradeHighlight\">(10 + Stagger LV x 5) [Laceration] Potency</style> and <style=\"upgradeHighlight\">(10 + Stagger LV x 5)</style> [AttackDown] on them this turn and next turn. (Activates once per enemy per Encounter. Does not activate against certain enemies that do not recover from Stagger)",
       "simpleDesc": [
         {
           "abilityID": 19020,
@@ -532,7 +532,7 @@
     {
       "id": 29020,
       "name": "White Gossypium++",
-      "desc": "Turn Start: If there are Staggered enemies, un-Stagger enemies. Then, inflict <style=\"upgradeHighlight\">(12 + Stagger LV x 6) [Laceration] Potency</style> and <style=\"upgradeHighlight\">(12 + Stagger LV x 6)</style> [AttackDown] and <style=\"upgradeHighlight\">[DefenseDown]</style> on them. (Activates once per enemy per Encounter. Does not activate against certain enemies that do not recover from Stagger)",
+      "desc": "Turn Start: If there are Staggered enemies, un-Stagger enemies. Then, inflict <style=\"upgradeHighlight\">(12 + Stagger LV x 6) [Laceration] Potency</style> and <style=\"upgradeHighlight\">(12 + Stagger LV x 6)</style> [AttackDown] and <style=\"upgradeHighlight\">[DefenseDown]</style> on them this turn and next turn. (Activates once per enemy per Encounter. Does not activate against certain enemies that do not recover from Stagger)",
       "simpleDesc": [
         {
           "abilityID": 29020,
@@ -726,7 +726,7 @@
     {
       "id": 9030,
       "name": "Gathering Skulls",
-      "desc": "After defeating an enemy by using a Pride Affinity or Pierce damage Skill, raise the unit's Pierce Power by 2 for the next 2 turns.",
+      "desc": "If an enemy is killed by Attack End of a Pierce Skill or a Pride Skill: For 2 turns, starting next turn, raise the Pierce Skill Power by 2 for the unit who used the Skill",
       "simpleDesc": [
         {
           "abilityID": 9030,
@@ -782,7 +782,7 @@
     {
       "id": 9032,
       "name": "Dreaming Electric Sheep",
-      "desc": "After defeating an enemy by using an Envy Affinity or Slash damage Skill, raise the unit's Slash Skill Power by 2 for the next 2 turns.\n\nWhen activating Envy Absolute Resonance, all allies gain 2 [AttackUp] and 2 [DefenseUp] at Combat Start.",
+      "desc": "If an enemy is killed by Attack End of a Slash Skill or an Envy Skill: For 2 turns, starting next turn, raise the Slash Skill Power by 2 for the unit who used the Skill\n\nWhen activating Envy A-Reson., all allies gain 2 [AttackUp] and 2 [DefenseUp] at Combat Start",
       "simpleDesc": [
         {
           "abilityID": 9032,
@@ -901,7 +901,7 @@
     {
       "id": 9037,
       "name": "Child within a Flask",
-      "desc": "Encounter Start: gain +1 E.G.O resource for every Sin Affinity.",
+      "desc": "Encounter Start: Gain +1 E.G.O resource for every Sin Affinity\n\nUpon winning an Encounter, gain 2 E.G.O resource for the 2 least-owned Affinities",
       "simpleDesc": [
         {
           "abilityID": 9037,
@@ -1769,7 +1769,7 @@
     {
       "id": 9065,
       "name": "Artistic Sense",
-      "desc": "Deal +35% damage against enemies suffering negative effects (Low Morale, Panic) from SP loss.\n\nIf the Skill inflicts [Sinking] Potency or Count(including Unique 'Sinking'), deal +10% damage in addition to the above.\n\nWhen [Sinking]'s effect applies to enemies without Sanity, the Affinity of the damage inflicted changes to whatever is the most effective.",
+      "desc": "Deal +35% damage against enemies suffering negative effects (Low Morale, Panic) from SP loss.\n\nIf the Skill inflicts [Sinking] Potency or Count(including 'Unique Sinking'), deal +10% damage in addition to the above.\n\nWhen [Sinking]'s effect applies to enemies that are Non-SP Units, the Affinity of the damage inflicted changes to whatever is the most effective.",
       "simpleDesc": [
         {
           "abilityID": 9065,
@@ -1784,7 +1784,7 @@
     {
       "id": 19065,
       "name": "Artistic Sense+",
-      "desc": "<style=\"upgradeHighlight\">Deal +40% damage against enemies with less than 0 SP.</style>\n\nIf the Skill inflicts [Sinking] Potency or Count(including Unique 'Sinking'), deal +<style=\"upgradeHighlight\">10</style>% damage in addition to the above.\n\nWhen [Sinking]'s effect applies to enemies without Sanity, the Affinity of the damage inflicted changes to whatever is the most effective.",
+      "desc": "<style=\"upgradeHighlight\">Deal +40% damage against enemies with less than 0 SP.</style>\n\nIf the Skill inflicts [Sinking] Potency or Count(including 'Unique Sinking'), deal +10% damage in addition to the above.\n\nWhen [Sinking]'s effect applies to enemies that are Non-SP Units, the Affinity of the damage inflicted changes to whatever is the most effective.",
       "simpleDesc": [
         {
           "abilityID": 19065,
@@ -1799,7 +1799,7 @@
     {
       "id": 29065,
       "name": "Artistic Sense++",
-      "desc": "<style=\"upgradeHighlight\">Deal +50% damage against enemies without SP or with less than 0 SP.</style>\n\nIf the Skill inflicts [Sinking] Potency or Count(including Unique 'Sinking'), deal +<style=\"upgradeHighlight\">10</style>% damage in addition to the above.\n\nWhen [Sinking]'s effect applies to enemies without Sanity, the Affinity of the damage inflicted changes to whatever is the most effective.",
+      "desc": "<style=\"upgradeHighlight\">Deal +50% damage against enemies that are non-SP units or have less than 0 SP.</style>\n\nIf the Skill inflicts [Sinking] Potency or Count(including 'Unique Sinking'), deal +10% damage in addition to the above.\n\nWhen [Sinking]'s effect applies to enemies that are Non-SP Units, the Affinity of the damage inflicted changes to whatever is the most effective.",
       "simpleDesc": [
         {
           "abilityID": 29065,
@@ -2280,22 +2280,26 @@
     {
       "id": 9084,
       "name": "Ancient Effigy",
-      "desc": "Turn Start: select one of the fastest allies and apply 5 [Agility] to them next turn.\n\nNext Turn Start: select one of the other fastest allies (allies without the Ancient Effigy effect) and re-apply the Gift effect to them. (effect expires if no other allies can be selected)",
+      "desc": "Turn Start: select one of the fastest allies and apply 5 [Agility] to them next turn.\n\nNext Turn Start: select one of the other fastest allies (allies without the Ancient Effigy effect) and re-apply the Gift effect to them. (effect expires if no other allies can be selected)\n\nAt 10+ Speed, the ally gains (Speed difference with the target / 2) Offense Level (max 5; rounded down)",
       "simpleDesc": [
         {
           "abilityID": 9084,
           "simpleDesc": "Gain 5 [Agility]"
+        },
+        {
+          "abilityID": 90841,
+          "simpleDesc": "Gain (Speed difference with the target / 2) Offense Level"
         }
       ]
     },
     {
       "id": 9085,
       "name": "Non-disclosure Agreement",
-      "desc": "Turn Start: A random ally deals +10% damage (effective until Non-disclosure Agreement effect expires).\n\nThe ally deals additional +10% damage every time it hits with a Skill and deals HP damage to an enemy (Max +40% damage). If the ally takes HP damage, the Gift's effect expires. At the next Turn Start, apply the same Gift effect to another random ally. (effect expires if no other allies can be selected)",
+      "desc": "Turn Start: A random ally deals +10% damage and gains Shield equal to 49% of max HP (effective until Non-disclosure Agreement effect expires)\n\nThe ally deals additional +10% damage every time it hits with a Skill and deals HP damage to an enemy (max +40% damage)\n\nIf the ally takes HP damage, the Gift's effect expires. At the next Turn Start, apply the same Gift effect to another random ally. (accumulated damage boost carries over; effect expires if no other allies can be selected)",
       "simpleDesc": [
         {
           "abilityID": 9085,
-          "simpleDesc": "Deal +10% damage"
+          "simpleDesc": "Deal +10% damage; gain Shield equal to 49% of max HP"
         }
       ]
     },
@@ -2350,11 +2354,11 @@
     {
       "id": 9088,
       "name": "Soothe the Dead",
-      "desc": "Turn Start: This Gift activates for the whole Encounter when 5 or more Identities have Attack Skills that apply [Combustion] Potency, Count, or 'Unique Burn'. (except E.G.O Skills; except Backup Units)\n\nInflict 3 [Combustion] Count to all enemies and randomly inflict a total of 15 [Combustion] Potency between all enemies (or all Abnormality parts; once per wave)\n\nPlus Coin Skills that inflict [Combustion] Potency, Count, or 'Unique Burn': Final Power +1, Coin Power +1, inflicted [Combustion] Potency +1, inflicted [Combustion] Count +1.\n- Minus Coin Base Attack Skills: Instead of gaining Coin Power, gain Base Power +(4 / # of Coins) (min 1; rounded down)\n\nWhen winning a Clash with a Skill that inflicts [Combustion] Potency, Count, or 'Unique Burn', inflict (# of remaining Coins + 1) [Combustion] Potency to the target enemy.",
+      "desc": "Turn Start: This Gift activates for the whole Encounter when 5 or more Identities have Attack Skills that apply [Combustion] Potency, Count, or 'Unique Burn' (except E.G.O Skills; except Backup Units)\n\nTurn Start: Inflict +6 [Combustion] Count to all enemies and randomly inflict a total of 15 [Combustion] Potency between all enemies (or all Abnormality Parts; once per wave)\n\nPlus Coin Skills that inflict [Combustion] Potency, Count, or 'Unique Burn': Final Power +1, Coin Power +1, inflicted [Combustion] Potency +1, inflicted [Combustion] Count +1\n- Minus Coin Base Attack Skills: Instead of gaining Coin Power, gain Base Power +(4 / # of Coins) (min 1; rounded down)\n\nWhen winning a Clash with a Skill that inflicts [Combustion] Potency, Count, or 'Unique Burn', inflict (# of remaining Coins + 1) [Combustion] Potency to the target enemy.",
       "simpleDesc": [
         {
           "abilityID": 9088,
-          "simpleDesc": "Inflict +3 [Combustion] Count; Randomly inflict 15 [Combustion] Potency between all enemies"
+          "simpleDesc": "Inflict +6 [Combustion] Count; randomly inflict 15 [Combustion] Potency between all enemies"
         },
         {
           "abilityID": 90881,
@@ -2437,7 +2441,7 @@
     {
       "id": 9091,
       "name": "Bell of Truth",
-      "desc": "Inflict 1 [Vulnerable] this turn to enemies affected by [Vibration] Burst. (Activates once per Attack Skill that triggers [VibrationExplosion])",
+      "desc": "Inflict 1 [Vulnerable] this turn to enemies affected by [VibrationExplosion]. (Activates once per Attack Skill that triggers [VibrationExplosion])",
       "simpleDesc": [
         {
           "abilityID": 9091,
@@ -2522,7 +2526,7 @@
     {
       "id": 9094,
       "name": "Enrapturing Trance",
-      "desc": "Turn Start: This Gift activates for the whole Encounter when 5 or more Identities have Attack Skills that apply [Burst] Potency or Count. (except E.G.O Skills; except Backup Units)\n\nWhen hitting an enemy with a Skill, inflict 5 [Burst] Potency.\n\nWhen [Burst] Count on an enemy drops below 1, consume 10 [Burst] Potency instead of [Burst] Count. (This effect ends when [Burst] Potency drops below 10)\n\nIf the target has less than 3 [Burst] Count, inflict +1 more Count when inflicting [Burst] Count. (3 times per Encounter)",
+      "desc": "Turn Start: This Gift activates for the whole Encounter when 5 or more Identities have Attack Skills that apply [Burst] Potency or Count. (except E.G.O Skills; except Backup Units)\n\nWhen hitting an enemy with a Skill, inflict 5 [Burst] Potency\n- Skills that inflict [Burst] Potency or Count: Inflict an additional 3 [Burst] Potency and +1 [Burst] Count (once per Skill)\n\nWhen [Burst] Count on an enemy drops below 1, consume 10 [Burst] Potency instead of [Burst] Count. (This effect ends when [Burst] Potency drops below 10)\n\nIf the target has less than 3 [Burst] Count, inflict +1 more Count when inflicting [Burst] Count. (3 times per Encounter)",
       "simpleDesc": [
         {
           "abilityID": 9094,
@@ -2574,7 +2578,7 @@
     {
       "id": 9096,
       "name": "Black Sheet Music",
-      "desc": "Turn Start: This Gift activates for the whole Encounter when 5 or more Identities have Attack Skills that apply [Sinking] Potency, Count, or 'Unique Sinking'. (except E.G.O Skills; except Backup Units)\n\nOn Hit against an enemy with a Skill: inflict 5 [Sinking] Potency.\n\nTurn Start: enemies or Parts with [Sinking] regain ([Sinking] Count each enemy lost On Hit last turn / 2) [Sinking] Count.\n\nOn Hit with a Base Attack Skill: deal ([Sinking] Potency on target / 10) Gloom damage (min 1 damage)\n\nOn Hit with an Attack Skill: if the target's SP is below 0, Skill deals more damage the further the target's SP is from 0 (+1% damage per SP)\n- If the target is Panicked, deal +50% damage instead\n- If the target does not have SP, deal +1% damage for every 2 [Sinking] Potency on target. If target has 90+ [Sinking] Potency, deal +50% damage instead",
+      "desc": "Turn Start: This Gift activates for the whole Encounter when 5 or more Identities have Attack Skills that apply [Sinking] Potency, Count, or 'Unique Sinking'. (except E.G.O Skills; except Backup Units)\n\nOn Hit against an enemy with a Skill: inflict 5 [Sinking] Potency.\n\nTurn Start: enemies or Parts with [Sinking] regain ([Sinking] Count each enemy lost On Hit last turn / 2) [Sinking] Count.\n\nOn Hit with a Base Attack Skill: deal ([Sinking] Potency on target / 10) Gloom damage (min 1 damage)\n\nOn Hit with an Attack Skill: if the target's SP is below 0, Skill deals more damage the further the target's SP is from 0 (+1% damage per SP)\n- If the target is Panicked, deal +50% damage instead\n- For targets that are Non-SP Units: Deal +1% damage for every 2 [Sinking] Potency on target. If target has 90+ [Sinking] Potency, deal +50% damage instead",
       "simpleDesc": [
         {
           "abilityID": 9096,
@@ -2754,7 +2758,7 @@
     {
       "id": 9102,
       "name": "Polarization",
-      "desc": "If the ally has 30 or more SP than the target, deal +7.5% damage with Skills that inflict [Combustion] Potency, Count, or 'Unique Burn'. (For enemies without SP, their 'SP' counts as 0)",
+      "desc": "If the ally has 30 or more SP than the target, deal +7.5% damage with Skills that inflict [Combustion] Potency, Count, or 'Unique Burn'. (for enemies that are Non-SP Units, their 'SP' counts as 0)",
       "simpleDesc": [
         {
           "abilityID": 9102,
@@ -2765,7 +2769,7 @@
     {
       "id": 19102,
       "name": "Polarization+",
-      "desc": "If the ally has <style=\"upgradeHighlight\">25</style> or more SP than the target, deal <style=\"upgradeHighlight\">+12.5%</style> damage with Skills that inflict [Combustion] Potency, Count, or 'Unique Burn'. (For enemies without SP, their 'SP' counts as 0)",
+      "desc": "If the ally has <style=\"upgradeHighlight\">25</style> or more SP than the target, deal <style=\"upgradeHighlight\">+12.5%</style> damage with Skills that inflict [Combustion] Potency, Count, or 'Unique Burn'. (for enemies that are Non-SP Units, their 'SP' counts as 0)",
       "simpleDesc": [
         {
           "abilityID": 19102,
@@ -2776,7 +2780,7 @@
     {
       "id": 29102,
       "name": "Polarization++",
-      "desc": "If the ally has <style=\"upgradeHighlight\">15</style> or more SP than the target, deal <style=\"upgradeHighlight\">+20%</style> damage with Skills that inflict [Combustion] Potency, Count, or 'Unique Burn'. (For enemies without SP, their 'SP' counts as 0)",
+      "desc": "If the ally has <style=\"upgradeHighlight\">15</style> or more SP than the target, deal <style=\"upgradeHighlight\">+20%</style> damage with Skills that inflict [Combustion] Potency, Count, or 'Unique Burn'. (for enemies that are Non-SP Units, their 'SP' counts as 0)",
       "simpleDesc": [
         {
           "abilityID": 29102,
@@ -3338,7 +3342,7 @@
     {
       "id": 9124,
       "name": "Grandeur",
-      "desc": "[Effects apply only to #1, #2 Deployed Identities]\n\nWhen dealing damage with an Attack Skill that inflicts [Sinking] Potency, Count, or 'Unique Sinking' against targets with 10+ ([Sinking] Potency + Count), inflict 2 [Sinking] Potency and +2 [Sinking] Count After Attack (2 times per turn per Identity)\nIn Focused Encounters: inflict 4 [Sinking] Potency and +2 [Sinking] Count instead (once per turn per Identity)",
+      "desc": "[Effects apply only to #1, #2 Deployed Identities]\n\nWhen dealing damage with an Attack Skill that inflicts [Sinking] Potency, Count, or 'Unique Sinking' against targets with 10+ ([Sinking] Potency + Count), inflict 2 [Sinking] Potency and +2 [Sinking] Count at Attack End (2 times per turn per Identity)\nIn Focused Encounters: inflict 4 [Sinking] Potency and +2 [Sinking] Count instead (once per turn per Identity)",
       "simpleDesc": [
         {
           "abilityID": 9124,
@@ -3349,7 +3353,7 @@
     {
       "id": 19124,
       "name": "Grandeur+",
-      "desc": "[Effects apply only to #1, #2, and <style=\"upgradeHighlight\">#3</style> Deployed Identities]\n\nWhen dealing damage with an Attack Skill that inflicts [Sinking] Potency, Count, or 'Unique Sinking' against targets with <style=\"upgradeHighlight\">8</style>+ ([Sinking] Potency + Count), inflict <style=\"upgradeHighlight\">3</style> [Sinking] Potency and +2 [Sinking] Count After Attack (2 times per turn per Identity)\nIn Focused Encounters: inflict <style=\"upgradeHighlight\">5</style> [Sinking] Potency and +2 [Sinking] Count instead (once per turn per Identity)",
+      "desc": "[Effects apply only to #1, #2, and <style=\"upgradeHighlight\">#3</style> Deployed Identities]\n\nWhen dealing damage with an Attack Skill that inflicts [Sinking] Potency, Count, or 'Unique Sinking' against targets with <style=\"upgradeHighlight\">8</style>+ ([Sinking] Potency + Count), inflict <style=\"upgradeHighlight\">3</style> [Sinking] Potency and +2 [Sinking] Count at Attack End (2 times per turn per Identity)\nIn Focused Encounters: inflict <style=\"upgradeHighlight\">5</style> [Sinking] Potency and +2 [Sinking] Count instead (once per turn per Identity)",
       "simpleDesc": [
         {
           "abilityID": 19124,
@@ -3360,7 +3364,7 @@
     {
       "id": 29124,
       "name": "Grandeur++",
-      "desc": "[Effects apply only to #1, #2, and #3 Deployed Identities]\n\nWhen dealing damage with an Attack Skill that inflicts [Sinking] Potency, Count, or 'Unique Sinking' against targets with <style=\"upgradeHighlight\">5</style>+ ([Sinking] Potency + Count), inflict 3 [Sinking] Potency and <style=\"upgradeHighlight\">+3</style> [Sinking] Count After Attack (2 times per turn per Identity)\nIn Focused Encounters: inflict 5 [Sinking] Potency and <style=\"upgradeHighlight\">+3</style> [Sinking] Count instead (once per turn per Identity)",
+      "desc": "[Effects apply only to #1, #2, and #3 Deployed Identities]\n\nWhen dealing damage with an Attack Skill that inflicts [Sinking] Potency, Count, or 'Unique Sinking' against targets with <style=\"upgradeHighlight\">5</style>+ ([Sinking] Potency + Count), inflict 3 [Sinking] Potency and <style=\"upgradeHighlight\">+3</style> [Sinking] Count at Attack End (2 times per turn per Identity)\nIn Focused Encounters: inflict 5 [Sinking] Potency and <style=\"upgradeHighlight\">+3</style> [Sinking] Count instead (once per turn per Identity)",
       "simpleDesc": [
         {
           "abilityID": 29124,
@@ -3608,7 +3612,7 @@
     {
       "id": 9134,
       "name": "Patrolling Flashlight",
-      "desc": "[Effects apply only to #1, #2 Deployed Identities]\n\nTurn Start: if the affected Identity has a Skill that gains or consumes [Charge] Count or 'Unique Charge', the Identity's Skill 1 gains Clash Power +1 and deals +10% damage while that unit has [ChargeForceField].\n\nTurn End: if the affected Identity does not have [ChargeForceField], apply 2 [ChargeForceField] next turn.",
+      "desc": "[Effects apply only to #1, #2 Deployed Identities]\n\nTurn Start: The affected Identity gains 2 [ChargeForceField]\n\nIf the affected Identity has a Skill that gains or consumes [Charge] Count or 'Unique Charge', the Identity's Skill 1 gains Clash Power +1 and deals +10% damage while that unit has [ChargeForceField]",
       "simpleDesc": [
         {
           "abilityID": 9134,
@@ -3623,7 +3627,7 @@
     {
       "id": 19134,
       "name": "Patrolling Flashlight+",
-      "desc": "[Effects apply only to #1, #2, and <style=\"upgradeHighlight\">#3</style> Deployed Identities]\n\nTurn Start: if the affected Identity has a Skill that gains or consumes [Charge] Count or 'Unique Charge', the Identity's Skill 1 gains Clash Power +1 and deals <style=\"upgradeHighlight\">+15</style>% damage while that unit has [ChargeForceField].\n\nTurn End: if the affected Identity does not have [ChargeForceField], apply <style=\"upgradeHighlight\">3</style> [ChargeForceField] next turn.",
+      "desc": "[Effects apply only to #1, #2, <style=\"upgradeHighlight\">and #3</style> Deployed Identities]\n\nTurn Start: The affected Identity gains <style=\"upgradeHighlight\">3</style> [ChargeForceField]\n\nIf the affected Identity has a Skill that gains or consumes [Charge] Count or 'Unique Charge', the Identity's Skill 1 gains Clash Power +1 and deals +<style=\"upgradeHighlight\">15</style>% damage while that unit has [ChargeForceField]",
       "simpleDesc": [
         {
           "abilityID": 19134,
@@ -3638,7 +3642,7 @@
     {
       "id": 29134,
       "name": "Patrolling Flashlight++",
-      "desc": "[Effects apply only to #1, #2, and #3 Deployed Identities]\n\nTurn Start: if the affected Identity has a Skill that gains or consumes [Charge] Count or 'Unique Charge', the Identity's Skill 1 gains Clash Power +1 and deals <style=\"upgradeHighlight\">+25</style>% damage while that unit has [ChargeForceField].\n\nTurn End: if the affected Identity does not have [ChargeForceField], apply <style=\"upgradeHighlight\">4</style> [ChargeForceField] next turn.",
+      "desc": "[Effects apply only to #1, #2, and #3 Deployed Identities]\n\nTurn Start: The affected Identity gains <style=\"upgradeHighlight\">4</style> [ChargeForceField]\n\nIf the affected Identity has a Skill that gains or consumes [Charge] Count or 'Unique Charge', the Identity's Skill 1 gains Clash Power +1 and deals +<style=\"upgradeHighlight\">25</style>% damage while that unit has [ChargeForceField]",
       "simpleDesc": [
         {
           "abilityID": 29134,
@@ -3653,7 +3657,7 @@
     {
       "id": 9135,
       "name": "Imitative Generator",
-      "desc": "[Effects apply only to #1, #2 Deployed Identities]\n\nActivates when the unit has 10+ ([Charge] Count + 'Unique Charge') at Turn Start.\n\nPlus Coin Power +1 to Skill 3 that gains or consumes [Charge] Count or 'Unique Charge'.\n- Minus Coin Skills: Instead of gaining Plus Coin Power, gain Base Power +(4 / # of Coins) (min 1; rounded down)\n\nIf the said Skill has less than 5 Base Power, deal +25% damage; if it has 5+ Base Power, gain an additional Plus Coin Power +1.\n- Minus Coin Skills: Instead of gaining Plus Coin Power, gain Base Power +(4 / # of Coins) (min 1; rounded down)",
+      "desc": "[Effects apply only to #1, #2 Deployed Identities]\n\nActivates when the unit has 10+ ([Charge] Count + 'Unique Charge'(fixed Potency)) at Turn Start.\n\nPlus Coin Power +1 to Skill 3 that gains or consumes [Charge] Count or 'Unique Charge'(fixed Potency).\n- Minus Coin Skills: Instead of gaining Plus Coin Power, gain Base Power +(4 / # of Coins) (min 1; rounded down)\n\nIf the said Skill has less than 5 Base Power, deal +25% damage; if it has 5+ Base Power, gain an additional Plus Coin Power +1.\n- Minus Coin Skills: Instead of gaining Plus Coin Power, gain Base Power +(4 / # of Coins) (min 1; rounded down)\n\n※ For 'Unique Charge' that has both Potency and Count, its Count will be used for above calculations",
       "simpleDesc": [
         {
           "abilityID": 9135,
@@ -3668,7 +3672,7 @@
     {
       "id": 9136,
       "name": "Fragment of Friction",
-      "desc": "Activates when using E.G.O Awakening Skills that gain or consume [Charge] Count or 'Unique Charge'.\n\nGain Final Power equal to (Envy E.G.O resource + sum of other E.G.O resources/3) consumed and deal +50% damage\n\nEnvy E.G.O Skills: gain additional [Charge] Count Before Attack(ZAYIN gains +2 Count, TETH gains +3 Count, HE gains +4 Count, and so on), and deal +(([Charge] Count on self + 'Unique Charge') x 5)% damage. (200% max)",
+      "desc": "Activates when using E.G.O Awakening Skills that gain or consume [Charge] Count or 'Unique Charge'(fixed Potency).\n\nGain Final Power equal to (Envy E.G.O resource + sum of other E.G.O resources/3) consumed and deal +50% damage\n\nEnvy E.G.O Skills: gain additional [Charge] Count Before Attack(ZAYIN gains +2 Count, TETH gains +3 Count, HE gains +4 Count, and so on), and deal +(([Charge] Count on self + 'Unique Charge'(fixed Potency)) x 5)% damage. (200% max)\n\n※ For 'Unique Charge' that has both Potency and Count, its Count will be used for above calculations",
       "simpleDesc": [
         {
           "abilityID": 9136,
@@ -4157,11 +4161,11 @@
     {
       "id": 29149,
       "name": "Compression Bandage++",
-      "desc": "[Effects apply only to #5, #6 Deployed Identities]\n\nWhen hitting an enemy with a Blunt Skill, deal <style=\"upgradeHighlight\">3~7</style> Blunt bonus Damage.\n\nGloom Affinity Attack Skill: heal an additional <style=\"upgradeHighlight\">6</style> HP as well.",
+      "desc": "[Effects apply only to #5, #6 Deployed Identities]\n\nWhen hitting an enemy with a Blunt Skill, deal <style=\"upgradeHighlight\">5~7</style> Blunt bonus Damage\n\nGloom Attack Skills: Heal <style=\"upgradeHighlight\">6</style> HP as well",
       "simpleDesc": [
         {
           "abilityID": 29149,
-          "simpleDesc": "Inflict 3~7 bonus Blunt damage"
+          "simpleDesc": "Inflict 5~7 bonus Blunt damage"
         },
         {
           "abilityID": 291491,
@@ -4441,7 +4445,7 @@
     {
       "id": 9174,
       "name": "Tangled Bones",
-      "desc": "Turn Start: This Gift activates for the whole Encounter when 5 or more Identities have Attack Skills that apply [Sinking] Potency, Count, or 'Unique Sinking'. (except E.G.O Skills; except Backup Units)\n\nTurn Start: enemies with [Sinking](for Abnormalities, all Parts) regain ([Sinking] Count lost on hit last turn / 3) [Sinking] Count.\n\nIf the Base Attack Skill hits against a target with less than 0 SP(for enemies without SP, if they have 1.5+ Gloom Resist.), inflict ([Sinking] Potency / 10) Gloom Affinity damage (min 1, 10 times per turn for this effect)",
+      "desc": "Turn Start: This Gift activates for the whole Encounter when 5 or more Identities have Attack Skills that apply [Sinking] Potency, Count, or 'Unique Sinking'. (except E.G.O Skills; except Backup Units)\n\nTurn Start: enemies with [Sinking](for Abnormalities, all Parts) regain ([Sinking] Count lost on hit last turn / 3) [Sinking] Count.\n\nIf the Base Attack Skill hits against a target with less than 0 SP(for enemies that are Non-SP units, if they have 1.5+ Gloom Resist.), inflict ([Sinking] Potency / 10) Gloom Affinity damage (min 1, 10 times per turn for this effect)",
       "simpleDesc": [
         {
           "abilityID": 9174,

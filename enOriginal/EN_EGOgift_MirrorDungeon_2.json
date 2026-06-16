@@ -26,7 +26,7 @@
         },
         {
           "abilityID": 91582,
-          "simpleDesc": "Inflict ([Combustion] Potency on defeated enemy)/2 [Combustion] Potency"
+          "simpleDesc": "Inflict [Combustion] Potency equal to (remaining [Combustion] Stack on defeated enemy)"
         },
         {
           "abilityID": 91583,
@@ -241,7 +241,7 @@
     {
       "id": 9176,
       "name": "Impending Wave",
-      "desc": "Turn Start: This Gift activates for the whole Encounter when 5 or more Identities have Attack Skills that apply [Sinking] Potency, Count, or 'Unique Sinking'. (except E.G.O Skills; except Backup Units)\n\nTurn Start: inflict 1 [WaveSinking] against a random enemy\n\nWhen an enemy with [WaveSinking] is killed, at the next Turn Start, transfer the [WaveSinking] Stack from the said enemy to an enemy with the highest, but not maxed, [WaveSinking] Stack\n\nWhen hitting and dealing HP damage to an enemy with a Skill that inflicts [Sinking] Potency, Count, or 'Unique Sinking', inflict 4 [Sinking] Potency and +3 [Sinking] Count at Turn End (once per turn for each enemy)\nCombat Start: when activating Gloom or Lust A-Reson., inflict 3 [Sinking] and +3 [Sinking] on all enemies (for Abnormalities, a random Part)\n\nAfter using a base Attack Skill, if the target has 10+ [Sinking] Potency, heal ([Sinking] Potency on the target / 10) SP on self (max 5) and inflict the same amount as [DefenseDown] against the target (max 5; once per turn for each enemy)\n\nTurn End: all allies gain [AttackUp] equal to the number of enemies with -45 SP or without SP next turn (max 6)\n\nCoin Power +1 for Plus Coin Skills that inflict [Sinking] Potency, Count, or 'Unique Sinking'\nBase Power +(4 / # of Coins) (min. 1; rounded down) for Minus Coin Skills that inflict [Sinking] Potency, Count, or 'Unique Sinking'\n\nWhen activating the [Sinking] effect(including 'Unique Sinking') on the target with an On Hit effect from a Base Attack Skill that inflicts or gains [Sinking] Potency, [Sinking] Count, or 'Unique Sinking', heal 5 SP at Turn End (2 times per turn per Identity)\nIf the unit was at 45 SP at Turn Start, the effect changes to the following: when hitting and activating the [Sinking] effect(including 'Unique Sinking') on the target with a base Attack Skill, inflict +3 [Sinking] Count against the targeted enemy (2 times per turn per Identity)",
+      "desc": "Turn Start: This Gift activates for the whole Encounter when 5 or more Identities have Attack Skills that apply [Sinking] Potency, Count, or 'Unique Sinking'. (except E.G.O Skills; except Backup Units)\n\nTurn Start: inflict 1 [WaveSinking] against a random enemy\n\nWhen an enemy with [WaveSinking] is killed, at the next Turn Start, transfer the [WaveSinking] Stack from the said enemy to an enemy with the highest, but not maxed, [WaveSinking] Stack\n\nWhen hitting and dealing HP damage to an enemy with a Skill that inflicts [Sinking] Potency, Count, or 'Unique Sinking', inflict 4 [Sinking] Potency and +3 [Sinking] Count at Turn End (once per turn for each enemy)\nCombat Start: when activating Gloom or Lust A-Reson., inflict 3 [Sinking] and +3 [Sinking] on all enemies (for Abnormalities, a random Part)\n\nAfter using a base Attack Skill, if the target has 10+ [Sinking] Potency, heal ([Sinking] Potency on the target / 10) SP on self (max 5) and inflict the same amount as [DefenseDown] against the target (max 5; once per turn for each enemy)\n\nTurn End: all allies gain [AttackUp] equal to the number of enemies that have -45 SP or are Non-SP Units next turn (max 6)\n\nCoin Power +1 for Plus Coin Skills that inflict [Sinking] Potency, Count, or 'Unique Sinking'\nBase Power +(4 / # of Coins) (min. 1; rounded down) for Minus Coin Skills that inflict [Sinking] Potency, Count, or 'Unique Sinking'\n\nWhen activating the [Sinking] effect(including 'Unique Sinking') on the target with an On Hit effect from a Base Attack Skill that inflicts or gains [Sinking] Potency, [Sinking] Count, or 'Unique Sinking', heal 5 SP at Turn End (2 times per turn per Identity)\nIf the unit was at 45 SP at Turn Start, the effect changes to the following: when hitting and activating the [Sinking] effect(including 'Unique Sinking') on the target with a base Attack Skill, inflict +3 [Sinking] Count against the targeted enemy (2 times per turn per Identity)",
       "simpleDesc": [
         {
           "abilityID": 9176,
@@ -318,7 +318,7 @@
     {
       "id": 9181,
       "name": "Miniature Telepole",
-      "desc": "After Attack with a Skill Attack that consumed 7+ [Charge] Count on self: if the target is defeated, gain ([Charge] Count consumed by the Skill / 4) [Charge] Count (including 'Unique Charge')",
+      "desc": "Attack End with a Skill Attack that consumed 7+ [Charge] Count on self: if the target is defeated, gain ([Charge] Count consumed by the Skill / 4) [Charge] Count (including 'Unique Charge')",
       "simpleDesc": [
         {
           "abilityID": 9181,
@@ -329,7 +329,7 @@
     {
       "id": 9183,
       "name": "Insulator",
-      "desc": "Turn Start: This Gift activates for the whole Encounter when 5 or more Identities have Attack Skills that gain [Charge] Count or 'Unique Charge'. (except E.G.O Skills; except Backup Units)\n\nAfter Attack With a Skill Attack that consumes [Charge] Count on self: if the target is defeated, gain ([Charge] Count consumed by the Skill / 3) [Charge] Count\n\nTurn Start: at less than 3 [Charge] Count, gain +3 [Charge] Count\nTurn Start: at 3+ [Charge] Count, gain 1 [AttackDmgUp]",
+      "desc": "Turn Start: This Gift activates for the whole Encounter when 5 or more Identities have Attack Skills that gain [Charge] Count or 'Unique Charge'. (except E.G.O Skills; except Backup Units)\n\nAttack End with a Skill Attack that consumes [Charge] Count on self: If the target is defeated, gain ([Charge] Count consumed by the Skill / 3) [Charge] Count\n\nTurn Start: At less than 3 [Charge] Count, gain +3 [Charge] Count\nTurn Start: At 3+ [Charge] Count, gain 1 [AttackDmgUp]",
       "simpleDesc": [
         {
           "abilityID": 9183,
@@ -344,7 +344,7 @@
     {
       "id": 9184,
       "name": "T-5 Perpetual Motion Machine",
-      "desc": "Turn Start: This Gift activates for the whole Encounter when 5 or more Identities have Attack Skills that gain [Charge] Count or 'Unique Charge'. (except E.G.O Skills; except Backup Units)\n\nTurn Start: at less than 3 [Charge] Count, gain +5 [Charge] Count.\nTurn Start: at 5+ [Charge] Count, gain +2 min/max Speed, 1 [Enhancement], and 2 [AttackDmgUp]. (including 'Unique Charge')\n\nAll allies on the field gain [ShareCharge] at Turn Start.\n\nAfter Attack with a Skill 3 that consumes or gains [Charge] Count on self: if the target is defeated, or if the ally who used the Skill is at 3+ [Charge], they add 1 Skill 3 to the list of Skills for the next upcoming turn. (once per turn for each ally; including 'Unique Charge')",
+      "desc": "Turn Start: This Gift activates for the whole Encounter when 5 or more Identities have Attack Skills that gain [Charge] Count or 'Unique Charge'. (except E.G.O Skills; except Backup Units)\n\nTurn Start: At less than 3 [Charge] Count, gain +5 [Charge] Count.\nTurn Start: At 5+ [Charge] Count, gain +2 min/max Speed, 1 [Enhancement], and 2 [AttackDmgUp]. (including 'Unique Charge')\n\nAll allies on the field gain [ShareCharge] at Turn Start.\n\nAttack End with a Skill 3 that consumes or gains [Charge] Count on self: If the target is defeated, or if the ally who used the Skill is at 3+ [Charge], they add 1 Skill 3 to the list of Skills for the next upcoming turn. (once per turn for each ally; including 'Unique Charge')",
       "simpleDesc": [
         {
           "abilityID": 9184,
@@ -356,7 +356,7 @@
         },
         {
           "abilityID": 91842,
-          "simpleDesc": "After Attack with a Skill 3 that consumed [Charge] Count, add 1 Skill 3 to the Skill list"
+          "simpleDesc": "Attack End with a Skill 3 that consumed [Charge] Count: Add 1 Skill 3 to the Skill list"
         }
       ]
     }

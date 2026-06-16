@@ -524,6 +524,26 @@
       "id": 20409,
       "name": "Great Trichiliocosm [三千大世界]",
       "desc": "Ryōshū’s E.G.O Gear"
+    },
+    {
+      "id": 21009,
+      "name": "Harmony",
+      "desc": "Sinclair’s E.G.O Gear"
+    },
+    {
+      "id": 20210,
+      "name": "Ardor Blossom Star",
+      "desc": "Faust’s E.G.O Gear"
+    },
+    {
+      "id": 20909,
+      "name": "Into the Sunset",
+      "desc": "Rodion’s E.G.O Gear"
+    },
+    {
+      "id": 20509,
+      "name": "Shadow-vested Bladesinger [着影揮刀]",
+      "desc": "Meursault’s E.G.O Gear"
     }
   ]
 }

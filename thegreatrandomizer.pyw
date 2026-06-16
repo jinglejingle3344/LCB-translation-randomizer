@@ -3,12 +3,13 @@ from codecs import open as copen
 from pathlib import Path
 from collections.abc import Iterable
 from sys import setrecursionlimit
-from random import randint
+from random import randint, choice
 from sys import platform
 import tkinter as tk
 import tkinter.filedialog as td
 import tkinter.messagebox as tm
 from shutil import copytree
+from itertools import product
 setrecursionlimit(90000000)
 
 window = tk.Tk(className='EVIL limbus text randomizer')
@@ -24,8 +25,11 @@ namis = ('teller', 'title','name')
 dementia = tk.IntVar(wtf,value=0)
 trySimilarSize = tk.IntVar(wtf,value=0)
 topick = tk.StringVar(wtf,value='1')
-delv = tk.IntVar(wtf,value=1)
+delv = tk.IntVar(wtf,value=0)
+applySize = tk.IntVar(wtf, value = 0)
+applyColor = tk.IntVar(wtf, value = 0)
 
+colors = []
 randombsgo = ( # list of fields that can be just about any string value; used to grab all possible values and to 
 #figure out which ones to scramble
 #feel free to commen some out
@@ -96,8 +100,20 @@ def harvestValues(obj): #crawl object for matching keys (fields), put into vals
             else:
                 vals.append(g)
 
+def applyMarkup(string, size, color):
+    newstr = ''
+    for char in string:
+        toadd = char
+        if (not "<color" in string) and color:
+            toadd = "<color="+choice(colors)+">"+toadd+"</color>"
+        if (not "<size" in string) and size:
+            toadd = "<size="+str(randint(50,150))+"%>"+toadd+"</size>"
+        newstr+=toadd
+    return newstr
+
 def pickVal(original, i, recurse=1): #the value picker
     vlen = len(vals)
+    #if vlen == 0: return '...'
     n = randint(0, vlen-1)
     v = vals[n]
     retries = 0
@@ -106,12 +122,13 @@ def pickVal(original, i, recurse=1): #the value picker
         n = randint(0, vlen-1)
         v = vals[n]
         retries+=1
-    if delv.get() and recurse<=1: del vals[n]
     if not randomizeNames.get() and i in namis: v = original
     if dementia.get() and i in namis: v = obfuscate(v)
     if recurse>1:
         gotten = pickVal(original,i,recurse-1)
         v += ' ' + gotten
+    v = applyMarkup(v, applySize.get(), applyColor.get())
+    if delv.get() and recurse<=1: vals.pop(n)
     return v
 
 def scrambleValues(obj): #crawl object for matching keys (fields), grab and remove valid values from vals, 
@@ -227,6 +244,8 @@ def grabvals():
     crawlFS(Path(folds[0]))
 
 def scramble():
+    global colors
+
     if not checktopick():
         tm.showerror('Error', topickError) 
         return
@@ -238,6 +257,9 @@ def scramble():
         return
     status['text'] = 'scrambling, window is probably unresponsive...'
     window.update()
+    if applyColor.get() and len(colors) == 0:
+        print('generating colors table')
+        colors = ['#'+''.join(i) for i in product('0123456789ABCDEF',repeat=6)]
     crawlFS(Path(folds[2]), 'w')
     status['text'] = normalStatus
 
@@ -281,9 +303,11 @@ tk.Button(wtf, text='Update Lang configs (to not have to select the doohickey)',
 tk.Button(wtf, background="green", text='Dude i dont fucking care (complete every step at once; use this if you dont plan on messing with the above and below)', command=alloem).grid()
 tk.Checkbutton(wtf, text='Dementia', variable=dementia).grid()
 tk.Checkbutton(wtf, text='Randomize Names', variable=randomizeNames).grid()
-tk.Checkbutton(wtf, text='Delete harvested values from memory after use (being placed into a random field).\nOnly triggers on the final random string (relevant if u bother with the thing below).\nSet to false if it randomly stops working one time.', variable=delv).grid()
+#tk.Checkbutton(wtf, text='Delete harvested values from memory after use (being placed into a random field).\nOnly triggers on the final random string (relevant if u bother with the thing below).\nSet to false if it randomly stops working one time.', variable=delv).grid()
 tk.Label(wtf, text='How many times to add a random string to the field?\nSeparate 2 numbers with ~ to make it random (like 2~5)').grid()
 tk.Entry(wtf, textvariable=topick).grid()
 tk.Checkbutton(wtf, text='try to pick values of similar length to original. makes the process take longer since it rerolls up to 200 or so times', variable=trySimilarSize).grid()
+tk.Checkbutton(wtf, text='randomize colors', variable=applyColor).grid()
+tk.Checkbutton(wtf, text='randomize sizes', variable=applySize).grid()
 
 window.mainloop()

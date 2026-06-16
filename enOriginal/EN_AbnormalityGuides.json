@@ -324,7 +324,7 @@
     },
     {
       "id": 8019,
-      "codeName": "F-05-10-18-a",
+      "codeName": "F-02-10-18-a",
       "name": "Baba Yaga-A",
       "clue": "Clue",
       "storyList": [
@@ -340,7 +340,7 @@
     },
     {
       "id": 8020,
-      "codeName": "F-05-10-18-a",
+      "codeName": "F-02-10-18-a",
       "name": "Baba Yaga-A",
       "clue": "Clue",
       "storyList": [
@@ -356,7 +356,7 @@
     },
     {
       "id": 8021,
-      "codeName": "F-05-10-18-b",
+      "codeName": "F-02-10-18-b",
       "name": "Baba Yaga-B",
       "clue": "Clue",
       "storyList": [
@@ -372,7 +372,7 @@
     },
     {
       "id": 8022,
-      "codeName": "F-05-10-18-b",
+      "codeName": "F-02-10-18-b",
       "name": "Baba Yaga-B",
       "clue": "Clue",
       "storyList": [
@@ -1266,7 +1266,7 @@
       "storyList": [
         {
           "level": 1,
-          "story": "It wasn't the most pleasant encounter.\nYou might say that this would apply to facing any Abnormality in battle, but this one just...felt unusual, somehow.\nIt was sitting languidly still and crying strange noises, looking like it had given up on everything.\nThe protruding blue eyeballs were shifting around with no confidence...\nYeah. It was kinda getting on my nerves. I thought I might go crazy if I had to hear its cry any longer.\nI would rather just...\n→ Is that the reason you swung your mace against the orders? I find it hardly convincing.\n→ Nah, I'm with her. I'd snap too if I kept listening to that bloody croak. 'Sides, we're supposed to beat those Abnormalities or whatever until they're eggs, aye? What's the problem here?\n→ I, I thought so, too… I agreed it would've been better off to reduce it to an egg quickly…\n→ What's clockface on about now. They're ticking an awful lot.\n→ …Executive Manager asks for some respect for salvaging you tools after you gotyourselves killed in an idiotic charge."
+          "story": "It wasn't the most pleasant encounter.\nYou might say that this would apply to facing any Abnormality in battle, but this one just...felt unusual, somehow.\nIt was sitting languidly still and crying strange noises, looking like it had given up on everything.\nThe protruding blue eyeballs were shifting around with no confidence...\nYeah. It was kinda getting on my nerves. I thought I might go crazy if I had to hear its cry any longer.\nI would rather just...\n→ Is that the reason you swung your mace against the orders? I find it hardly convincing.\n→ Nah, I'm with her. I'd snap too if I kept listening to that bloody croak. 'Sides, we're supposed to beat those Abnormalities or whatever until they're eggs, aye? What's the problem here?\n→ I, I thought so, too… I agreed it would've been better off to reduce it to an egg quickly…\n→ What's clockface on about now. They're ticking an awful lot.\n→ …Executive Manager asks for some respect for salvaging you tools after you got yourselves killed in an idiotic charge."
         },
         {
           "level": 2,
@@ -1280,7 +1280,7 @@
     },
     {
       "id": 8519,
-      "codeName": "O-06-20-02",
+      "codeName": "O-05-20-02",
       "name": "Kqe-1j-23",
       "clue": "Clue",
       "storyList": [
@@ -1744,7 +1744,7 @@
     },
     {
       "id": 8076,
-      "codeName": "O-06-20-02",
+      "codeName": "O-05-20-02",
       "name": "kqe-1j-23",
       "clue": "Clue",
       "storyList": [
