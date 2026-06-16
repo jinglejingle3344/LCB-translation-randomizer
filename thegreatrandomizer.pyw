@@ -29,6 +29,8 @@ topickSizes = tk.StringVar(wtf,value='50~150')
 delv = tk.IntVar(wtf,value=0)
 applySize = tk.IntVar(wtf, value = 0)
 applyColor = tk.IntVar(wtf, value = 0)
+colorWords = tk.IntVar(wtf, value = 0)
+randomizeText = tk.IntVar(wtf, value = 1)
 
 colors = []
 randombsgo = ( # list of fields that can be just about any string value; used to grab all possible values and to 
@@ -102,35 +104,44 @@ def harvestValues(obj): #crawl object for matching keys (fields), put into vals
                 vals.append(g)
 
 def applyMarkup(string, size, color):
+    if not (size or color): return string
+    string1 = string
+    if colorWords.get():
+        string1 = string.split()
     sizes = list(map(int, topickSizes.get().split('~')))
     newstr = ''
-    for char in string:
+    for char in string1:
+        if char == ' ': 
+            newstr+=char
+            continue
         toadd = char
-        if (not "<color" in string) and color:
-            toadd = "<color="+choice(colors)+">"+toadd+"</color>"
         if (not "<size" in string) and size:
             toadd = "<size="+str(randint(min(sizes),max(sizes)))+"%>"+toadd+"</size>"
+        if (not "<color" in string) and color:
+            toadd = "<color="+choice(colors)+">"+toadd+"</color>"
         newstr+=toadd
     return newstr
 
 def pickVal(original, i, recurse=1): #the value picker
     vlen = len(vals)
     #if vlen == 0: return '...'
-    n = randint(0, vlen-1)
-    v = vals[n]
-    retries = 0
-    origlen = len(original)
-    while not (int(origlen*0.75) < len(v) < int(origlen*1.25)) and trySimilarSize.get() and retries <= min(1000, vlen):
-        n = randint(0, vlen-1)
-        v = vals[n]
-        retries+=1
-    if not randomizeNames.get() and i in namis: v = original
+    #n = randint(0, vlen-1)
+    #if delv.get() and recurse<=1: vals.pop(n)
+    if randomizeText.get():
+        v = choice(vals)
+        retries = 0
+        origlen = len(original)
+        while not (int(origlen*0.75) < len(v) < int(origlen*1.25)) and trySimilarSize.get() and retries <= min(1000, vlen):
+            v = choice(vals)
+            retries+=1
+        if not randomizeNames.get() and i in namis: v = original
+        if recurse>1:
+            gotten = pickVal(original,i,recurse-1)
+            v += ' ' + gotten
+    else:
+        v = original
     if dementia.get() and i in namis: v = obfuscate(v)
-    if recurse>1:
-        gotten = pickVal(original,i,recurse-1)
-        v += ' ' + gotten
     v = applyMarkup(v, applySize.get(), applyColor.get())
-    if delv.get() and recurse<=1: vals.pop(n)
     return v
 
 def scrambleValues(obj): #crawl object for matching keys (fields), grab and remove valid values from vals, 
@@ -261,7 +272,7 @@ def scramble():
     if (folds[2] in ('', None, ())): 
         tm.showerror('Error', langErr) 
         return
-    if (len(vals) == 0): 
+    if (len(vals) == 0 and randomizeText.get()): 
         tm.showerror('Error', valErr) 
         return
     status['text'] = 'scrambling, window is probably unresponsive...'
@@ -299,7 +310,8 @@ def alloem():
         return
     selectfolds()
     copp()
-    grabvals()
+    if randomizeText.get():
+        grabvals()
     scramble()
     updconf()
     print(":D")
@@ -319,6 +331,8 @@ tk.Label(wtf, text='Size ranges for "randomize sizes".\nSeparate 2 numbers with 
 tk.Entry(wtf, textvariable=topickSizes).grid()
 tk.Checkbutton(wtf, text='try to pick values of similar length to original. makes the process take longer since it rerolls up to 200 or so times', variable=trySimilarSize).grid()
 tk.Checkbutton(wtf, text='randomize colors', variable=applyColor).grid()
+tk.Checkbutton(wtf, text='color and resize only words', variable=colorWords).grid()
 tk.Checkbutton(wtf, text='randomize sizes', variable=applySize).grid()
+tk.Checkbutton(wtf, text='the inherent purpose of this script. disable if you only want randomize colors, sizes etc', variable=randomizeText).grid()
 
 window.mainloop()
