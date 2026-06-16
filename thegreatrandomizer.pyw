@@ -120,6 +120,7 @@ def applyMarkup(string, size, color):
         if (not "<color" in string) and color:
             toadd = "<color="+choice(colors)+">"+toadd+"</color>"
         newstr+=toadd
+        if colorWords.get(): newstr+=' '
     return newstr
 
 def pickVal(original, i, recurse=1): #the value picker
