@@ -25,6 +25,7 @@ namis = ('teller', 'title','name')
 dementia = tk.IntVar(wtf,value=0)
 trySimilarSize = tk.IntVar(wtf,value=0)
 topick = tk.StringVar(wtf,value='1')
+topickSizes = tk.StringVar(wtf,value='50~150')
 delv = tk.IntVar(wtf,value=0)
 applySize = tk.IntVar(wtf, value = 0)
 applyColor = tk.IntVar(wtf, value = 0)
@@ -101,13 +102,14 @@ def harvestValues(obj): #crawl object for matching keys (fields), put into vals
                 vals.append(g)
 
 def applyMarkup(string, size, color):
+    sizes = list(map(int, topickSizes.get().split('~')))
     newstr = ''
     for char in string:
         toadd = char
         if (not "<color" in string) and color:
             toadd = "<color="+choice(colors)+">"+toadd+"</color>"
         if (not "<size" in string) and size:
-            toadd = "<size="+str(randint(50,150))+"%>"+toadd+"</size>"
+            toadd = "<size="+str(randint(min(sizes),max(sizes)))+"%>"+toadd+"</size>"
         newstr+=toadd
     return newstr
 
@@ -203,8 +205,15 @@ infl3 = tk.Label(wtf, text='Working with language folder: None'); infl3.grid()
 
 def checktopick():
     txt1: str = topick.get().split('~')
+    txt2: str = topickSizes.get()
+    if not ('~' in txt2): return False
+    txt2 = txt2.split('~')
     f = True
     for n in txt1:
+        if not n.isdigit() or n == '0':
+            f = False
+            break
+    for n in txt2:
         if not n.isdigit() or n == '0':
             f = False
             break
@@ -306,6 +315,8 @@ tk.Checkbutton(wtf, text='Randomize Names', variable=randomizeNames).grid()
 #tk.Checkbutton(wtf, text='Delete harvested values from memory after use (being placed into a random field).\nOnly triggers on the final random string (relevant if u bother with the thing below).\nSet to false if it randomly stops working one time.', variable=delv).grid()
 tk.Label(wtf, text='How many times to add a random string to the field?\nSeparate 2 numbers with ~ to make it random (like 2~5)').grid()
 tk.Entry(wtf, textvariable=topick).grid()
+tk.Label(wtf, text='Size ranges for "randomize sizes".\nSeparate 2 numbers with ~ - this is required in this case.').grid()
+tk.Entry(wtf, textvariable=topickSizes).grid()
 tk.Checkbutton(wtf, text='try to pick values of similar length to original. makes the process take longer since it rerolls up to 200 or so times', variable=trySimilarSize).grid()
 tk.Checkbutton(wtf, text='randomize colors', variable=applyColor).grid()
 tk.Checkbutton(wtf, text='randomize sizes', variable=applySize).grid()
